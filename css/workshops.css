@@ -1,0 +1,114 @@
+@import url('./layout.css');
+
+#bg-container {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url('../images/workshop_bgDesktop.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    transition: all 600ms ease-in-out;
+}
+#shading {
+    background-color: rgba(0, 0, 0, .2);
+	background-image: linear-gradient(to right, rgba(0, 0, 0, .95),rgba(255, 255, 255, 0) 25%);
+}
+
+main {
+    width: 100%;;
+}
+#workshop-content {
+    width: 75%;
+}
+#workshop-content p {
+    line-height: 1.6rem;
+    text-shadow: 1px 1px #000;
+}
+#workshop-content p a,
+#workshop-content p a:link,
+#workshop-content p a:visited,
+#workshop-info a,
+#workshop-info a:link,
+#workshop-ifno a:visited {
+    color: #93adb6;
+    font-weight: 600;
+    text-decoration: none;
+    text-shadow: 1px 1px #000;
+    text-transform: uppercase;
+    transition:color 250ms ease-in-out;
+}
+#workshop-content p a:hover, 
+#workshop-content p a:active,
+#workshop-info a:hover, 
+#workshop-info a:active {
+    color: #656dab;
+}
+#workshop-content p a.workshop-link,
+#workshop-content p a.workshop-link:link,
+#workshop-content p a.workshop-link:visited {
+    text-transform: none;
+}
+
+#workshop-info {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    text-shadow: 1px 1px #000;
+}
+.description, .schedule, .benefit-value {
+    width: 30%;
+}
+#workshop-info h1 {
+    margin: 20px 0 0 0;
+}
+#workshop-info h2 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #656dab;
+}
+#workshop-info p {
+    line-height: 1.6rem;
+}
+#workshop-info ul {
+    list-style: none;
+}
+#workshop-info ul li:before {
+    content: "❖ ";
+}
+
+.benefit-value p {
+    display: flex;
+    justify-content: space-between;
+}
+.benefit-value p span.bold {
+    font-weight: bold;
+}
+.benefit-value p span:last-child {
+    width: 120px;
+    text-align: center;
+}
+.benefit-value ul li {
+    position: relative;
+}
+.benefit-value ul li span em {
+    font-size: .68rem;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+.benefit-value ul li span:last-child {
+    width: 120px;
+    text-align: center;
+    float: right;
+    font-weight: bold;
+}
+.benefits-title {
+    font-weight: bold;
+}
+.gl-total {
+    font-weight: bold;
+}
