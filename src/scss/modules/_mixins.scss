@@ -1,0 +1,15 @@
+/*
+ *  --------------------------------------------------
+ *  |   MAIN MIXINS                                  |
+ *  --------------------------------------------------
+ *  Project: Ghost Light Perfomance, Inc.
+ *  Author: Jonathan Wheeler
+*/
+
+@mixin animate ( $attr, $time, $delay: 0ms ) {
+    -webkit-transition: $attr $time ease-in-out $delay;
+    -moz-transition: $attr $time ease-in-out $delay;
+    -ms-transition: $attr $time ease-in-out $delay;
+    -o-transition: $attr $time ease-in-out $delay;
+    transition: $attr $time ease-in-out $delay;
+}

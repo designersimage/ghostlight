@@ -1,0 +1,14 @@
+/* Workshop Icon, Actors Icon, Models Icon, Auditions Icon, Career Icon, Contact Icon */
+svg {
+    .dark {
+        fill: $gl__dark;
+    }
+    .light {
+        fill: $gl__light;
+    }
+}
+
+/* Close Icon */
+svg#close {
+    fill: $gl__red;
+}

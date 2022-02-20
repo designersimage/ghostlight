@@ -1,0 +1,211 @@
+/*
+ *  --------------------------------------------------
+ *  |   MAIN NAVIGATION STYLES                       |
+ *  --------------------------------------------------
+ *  Project: Ghost Light Perfomance, Inc.
+ *  Author: Jonathan Wheeler
+*/
+
+nav.main-nav {
+    background: rgba(0, 0, 0, .75);
+    min-height: 100vh;
+    width: 100%;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 2rem;
+        position: relative;
+        width: 100%;
+
+        button.menu-close {
+            align-self: flex-end;
+            background: none;
+            border: none;
+            padding: 0;
+
+            svg {
+                height: 2.4rem;
+                width: 2.4rem;
+            }
+        }
+
+        .main-links {
+            align-items: center;
+            border-bottom: solid 2px $gl__light;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 2rem;
+
+            ul.text-links {
+                align-items: center;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                list-style: none;
+                padding: 0;
+
+                li {
+                    font-size: 1.1rem;
+                    font-weight: 700;
+                    margin: .7rem .8rem;
+                    text-transform: uppercase;
+
+                    a {
+                        color: $gl__dark;
+                        text-decoration: none;
+                        @include animate( color, 250ms );
+
+                        &:active {
+                            color: $gl__light;
+                        }
+                        &:hover {
+                            color: $gl__light;
+                        }
+                    }
+                }
+            }
+
+            ul.icon-links {
+                align-items: center;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                list-style: none;
+                padding: 0;
+
+                li {
+                    margin: .7rem .9rem;
+                    width: calc(33% - 1.8rem);
+                    
+                    a {
+                        color: $gl__light;
+                        display: block;
+                        font-size: 1.1rem;
+                        text-align: center;
+                        text-decoration: none;
+                        width: 100%;
+                        @include animate( all, 250ms );
+
+                        svg {
+                            border: solid 2px $gl__light;
+                            border-radius: 1.5rem;
+                            padding: .5rem;
+                            @include animate( all, 250ms );
+                            .dark, .light {
+                                @include animate( all, 250ms );
+                            }
+                        }
+
+                        &:active {
+                            color: $gl__grey-medium;
+
+                            svg {
+                                border-color: $gl__grey-medium;
+                                fill: $gl__grey-medium;
+                                .dark, .light {
+                                    fill: $gl__grey-medium;
+                                }
+                            }
+                        }
+                        &:hover {
+                            color: $gl__grey-medium;
+
+                            svg {
+                                border-color: $gl__grey-medium;
+                                fill: $gl__grey-medium;
+                                .dark, .light {
+                                    fill: $gl__grey-medium;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+
+        .community-partners {
+            padding: 3rem 0;
+
+            h2 {
+                color: $gl__grey-medium;
+                font-size: 2.4rem;
+                font-weight: 400;
+                padding-bottom: 1.4rem;
+                text-align: center;
+            }
+
+            p {
+                color: $gl__grey-medium;
+                font-size: 1.1rem;
+                letter-spacing: .1rem;
+                text-align: center;
+
+                a {
+                    color: $gl__dark;
+                    font-weight: 700;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    @include animate( color, 250ms );
+
+                    &:active {
+                        color: $gl__light;
+                    }
+                    &:hover {
+                        color: $gl__light;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 360px) {
+    
+}
+
+@media screen and (min-width: 375px) {
+    
+}
+
+@media screen and (min-width: 410px) {
+    
+}
+
+@media screen and (min-width: 425px) {
+    
+}
+
+@media screen and (min-width: 540px) {
+    
+}
+
+@media screen and (min-width: 768px) {
+    
+}
+
+@media screen and (min-width: 820px) {
+    
+}
+
+@media screen and (min-width: 1024px) {
+    
+}
+
+@media screen and (min-width: 1280px) {
+    
+}
+
+@media screen and (min-width: 1440px) {
+
+}
+
+@media screen and (min-width: 1600px) {
+
+}
+
+@media screen and (min-width: 1920px) {
+
+}

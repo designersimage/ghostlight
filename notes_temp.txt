@@ -1,0 +1,8 @@
+/**
+ * A shortcode for rendering the login form
+ *
+ * @param array  $attr      Shortcode attributes
+ * @param string $content   The text content for the shortcode - NOT USED
+ * 
+ * @return string           The shortcode output
+ */

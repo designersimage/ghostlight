@@ -1,0 +1,22 @@
+/*
+ *  --------------------------------------------------
+ *  |   MAIN STYLES                                  |
+ *  --------------------------------------------------
+ *  Project: Ghost Light Perfomance, Inc.
+ *  Author: Jonathan Wheeler
+*/
+
+/* Reset defaults */
+@import './modules/reset';
+
+/* Apply style variables */
+@import './modules/variables';
+
+/* Apply mixins */
+@import './modules/mixins';
+
+/* Apply icon svg fill colors */
+@import './modules/icons';
+
+/* Apply navigation elements styles */
+@import './modules/navigation';

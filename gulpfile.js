@@ -46,8 +46,8 @@ const jsMainURL               = './assets/';
 // const fontsSRC     = './src/fonts/**/*';
 // const fontsURL     = './dist/fonts/';
 
-const styleMainWatch   = './src/scss/**/*.scss';
-const jsMainWatch      = './src/js/**/*.js';
+const styleMainWatch   = './src/**/**/*.scss';
+const jsMainWatch      = './src/**/**/*.js';
 
 // const imgWatch     = './src/images/**/*.*';
 // const fontsWatch   = './src/fonts/**/*.*';
