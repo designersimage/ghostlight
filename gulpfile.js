@@ -40,8 +40,8 @@ const jsMain                  = 'main.js';
 const jsMainFiles             = [ jsMain ];
 const jsMainURL               = './assets/';
 
-// const imgSRC       = './src/images/**/*';
-// const imgURL       = './dist/images/';
+const imgSRC       = './src/images/*.{png,jpg}';
+const imgURL       = './assets/images/';
 
 // const fontsSRC     = './src/fonts/**/*';
 // const fontsURL     = './dist/fonts/';
@@ -49,7 +49,7 @@ const jsMainURL               = './assets/';
 const styleMainWatch   = './src/**/**/*.scss';
 const jsMainWatch      = './src/**/**/*.js';
 
-// const imgWatch     = './src/images/**/*.*';
+const imgWatch     = './src/images/*.{png,jpg}';
 // const fontsWatch   = './src/fonts/**/*.*';
 
 const htmlWatch    = './**/*.html';
@@ -113,9 +113,9 @@ function triggerPlumber( src_file, dest_file ) {
 		.pipe( dest( dest_file ) );
 }
 
-// function images() {
-// 	return triggerPlumber( imgSRC, imgURL );
-// };
+function images() {
+	return triggerPlumber( imgSRC, imgURL );
+};
 
 // function fonts() {
 // 	return triggerPlumber( fontsSRC, fontsURL );
@@ -124,7 +124,7 @@ function triggerPlumber( src_file, dest_file ) {
 function watch_files() {
 	watch(styleMainWatch, series(css, reload));
 	watch(jsMainWatch, series(js, reload));
-	// watch(imgWatch, series(images, reload));
+	watch(imgWatch, series(images, reload));
 	// watch(fontsWatch, series(fonts, reload));
 	watch(htmlWatch, reload);
 	src(jsMainURL + 'main.min.js');
@@ -136,8 +136,8 @@ function watch_html() {
 
 task("css", css);
 task("js", js);
-// task("images", images);
+task("images", images);
 // task("fonts", fonts);
 task("live", parallel(browser_sync, watch_html));
-task("default", parallel(css, js/*, images, fonts*/));
+task("default", parallel(css, js, images/*, fonts*/));
 task("watch", parallel(browser_sync, watch_files));
