@@ -159,7 +159,7 @@ export const loadPageContent = () => {
                     break;
 
                 default:
-                    pageEl.classList.add('right');
+                    pageContentEl.classList.add('right');
             }
 
             const titleEl = document.createElement('h1');
