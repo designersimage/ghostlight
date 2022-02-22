@@ -11,10 +11,10 @@ export const pages = [
         slug: 'home',
         title: `Illuminating Possibilities with Performance Training.`,
         content: `<p>The <span class="current-year"></span> Ghost Light Schedule includes full-experience workshops in both Acting and Modeling for Introductory through Advanced levels utilizing Industry Insights to educate and prepare you for a successful career.</p>
-        <a href="company/" id="about-link" class="forward" title="About Ghost Light">Learn about Ghost Light</a>
-        <a href="workshops/" id="workshop-link" class="forward" title="See Workshops & Pricing">See workshops &amp; pricing &raquo;</a>
-        <a href="company/offers.html" id="special-link" class="forward" title="Special Offers">View <em>special offers</em> for students and community members, as well as scholorship opportunities.</a>
-        <p id="footer-info">Ghost Light Performance Inc. &copy; <span class="current-year"></span></p>`
+        <a href="company/" class="about-link" data-nav="forward" title="About Ghost Light">Learn about Ghost Light</a>
+        <a href="workshops/" class="workshop-link" data-nav="forward" title="See Workshops & Pricing">See workshops &amp; pricing &raquo;</a>
+        <a href="company/offers.html" class="special-link" data-nav="forward" title="Special Offers">View <em>special offers</em> for students and community members, as well as scholorship opportunities.</a>
+        <p class="footer-info">Ghost Light Performance Inc. &copy; <span class="current-year"></span></p>`
     },
 ]
 
@@ -468,6 +468,18 @@ export const workshops = [
             ],
             standardTotal: '$1,780',
             glpTotal: '$1,200'
+        }
+    }
+]
+
+export const users = [
+    {
+        id: 1,
+        username: 'admin',
+        password: 'Password',
+        info: {
+            name: 'Admin User',
+            email: 'someone@website.com'
         }
     }
 ]

@@ -1,0 +1,190 @@
+/*
+ *  --------------------------------------------------
+ *  |   HOME PAGE STYLES                             |
+ *  --------------------------------------------------
+ *  Project: Ghost Light Perfomance, Inc.
+ *  Author: Jonathan Wheeler
+*/
+
+
+.home {
+    background: url('../assets/images/home_bg.jpg') repeat  right 45% top fixed;
+    background-size: cover;
+    @include animate( all, 250ms );
+
+    &::before {
+        background-image: linear-gradient(to right, rgba(0, 0, 0, .95),rgba(0, 0, 0, .35) 50%);
+        content: '';
+        inset: 0;
+        position: absolute;
+    }
+
+    .home-content {
+        margin-top: 2rem;
+        @include animate( all, 250ms );
+
+        h1 {
+            color: white;
+            font-size: 2rem;
+            font-weight: 400;
+            margin: 0 0 2rem;
+            text-shadow: 1px 1px 1px black;
+        }
+
+        p {
+            color: $gl__white;
+            font-size: 1.2rem;
+            padding: 2rem 0;
+            text-shadow: 1px 1px 2px black, 0 0 0.2em black;
+        }
+
+        a.about-link {
+            background: rgba($gl__light, 1);
+            border: solid 1px $gl__white;
+            border-radius: .5rem;
+            color: $gl__white;
+            display: block;
+            font-size: 1.4rem;
+            margin: 3rem 0;
+            padding: 1rem 3rem;
+            text-align: center;
+            text-decoration: none;
+            width: fit-content;
+            @include animate( all, 250ms );
+
+            &:active, &:hover {
+                background: rgba($gl__light, .7);
+            }
+        }
+
+        a.workshop-link {
+            color: $gl__white;
+            display: block;
+            font-size: 1.6rem;
+            margin: 2rem 0;
+            text-align: left;
+            text-decoration: none;
+            text-shadow: 1px 1px 2px black, 0 0 0.2em black;
+            @include animate( color, 250ms );
+
+            &:active, &:hover {
+                color: $gl__light;
+            }
+        }
+
+        a.special-link {
+            color: $gl__white;
+            display: block;
+            font-size: 1.1rem;
+            text-align: left;
+            text-decoration: none;
+            text-shadow: 1px 1px 2px black, 0 0 0.2em black;
+            @include animate( color, 250ms );
+
+            em {
+                font-style: normal;
+                text-decoration: underline;
+            }
+
+            &:active, &:hover {
+                color: $gl__light;
+            }
+        }
+
+        p.footer-info {
+            color: $gl__grey;
+            font-size: 1.2rem;
+            text-align: left;
+            text-decoration: none;
+            text-shadow: 1px 1px 2px black, 0 0 0.2em black;
+        }
+
+        &.hide {
+            display: none;
+        }
+        
+        &.right {
+            transform: translateX(100vw);
+        }
+        &.left {
+            transform: translateX(-100vw);
+        }
+
+    }
+
+    &.hide {
+        display: none;
+    }
+    
+    .right {
+        transform: translateX(100vw);
+    }
+    .left {
+        transform: translateX(-100vw);
+    }
+
+}
+
+@media screen and (min-width: 360px) {
+    
+}
+
+@media screen and (min-width: 375px) {
+    .home {
+        background: url('../assets/images/home_bg.jpg') repeat  right 50% top fixed;
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 390px) {
+    .home {
+        background: url('../assets/images/home_bg.jpg') repeat  right 45% top fixed;
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 410px) {
+    
+}
+
+@media screen and (min-width: 425px) {
+    
+}
+
+@media screen and (min-width: 540px) {
+    .home-content {
+        background: url('../assets/images/home_bg.jpg') repeat  right 50% top fixed;
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    
+}
+
+@media screen and (min-width: 820px) {
+   
+}
+
+@media screen and (min-width: 1024px) {
+    
+}
+
+@media screen and (min-width: 1280px) {
+    .home-content {
+        background: url('../assets/images/home_bg.jpg') repeat  right 50% top fixed;
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+}
+
+@media screen and (min-width: 1600px) {
+
+}
+
+@media screen and (min-width: 1920px) {
+    
+}

@@ -5,13 +5,20 @@
  *  Project: Ghost Light Perfomance, Inc.
  *  Author: Jonathan Wheeler
 */
-import { pages, team, workshops } from '../data/data';
-import { getPageLinks, loadPageContent } from './modules/utils';
+import { getPageLinks, loadPageContent, loadWebsiteData, preloadImages } from './modules/utils';
+
+/* Execute preload before DOM is ready */
+preloadImages(['ghostlight_bg.png', 'ghostlight_logo.png', 'home_bg.jpg']);
+
+/* Execute before DOM is ready */
+loadWebsiteData();
 
 /* Execute when page is ready */
 ready((e) => {
-    // loadPageContent();
+    
+    loadPageContent();
     getPageLinks();
+
     // console.log(team[2].bio.split('\n'))
 });
 

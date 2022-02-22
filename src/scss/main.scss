@@ -21,5 +21,11 @@
 /* Apply icon svg fill colors */
 @import './modules/icons';
 
-/* Apply navigation elements styles */
-@import './modules/navigation';
+/* Apply page header styles */
+@import './modules/header';
+
+/* Apply modal elements styles - Menu, Sign In, Search */
+@import './modules/modal';
+
+/* Apply Home Page styles */
+@import './pages/home';

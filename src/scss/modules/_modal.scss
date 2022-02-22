@@ -1,0 +1,433 @@
+/*
+ *  --------------------------------------------------
+ *  |   MODAL STYLES - NAV, SIGN IN, SEARCH          |
+ *  --------------------------------------------------
+ *  Project: Ghost Light Perfomance, Inc.
+ *  Author: Jonathan Wheeler
+*/
+
+.modal-nav {
+    background: rgba(0, 0, 0, .9);
+    inset: 0;
+    position: absolute;
+    transform: translateY(-100vh);
+    z-index: 99;
+    @include animate( transform, 500ms );
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 2rem;
+        position: relative;
+        width: 100%;
+
+        button.menu-close {
+            align-self: flex-end;
+            background: none;
+            border: solid 2px $gl__red;
+            border-radius: .75rem;
+            margin-top: .5rem;
+            padding: 0;
+
+            svg {
+                fill: $gl__red;
+                margin-bottom: -4px;
+                width: 2.4rem;
+            }
+
+            &:active, &:focus {
+                background: $gl__red;
+
+                svg {
+                    fill: black;
+                }
+            }
+        }
+
+        .main-links {
+            align-items: center;
+            border-bottom: solid 2px $gl__light;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 2rem;
+
+            ul.text-links {
+                align-items: center;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                list-style: none;
+                padding: 0;
+
+                li {
+                    font-size: 1.1rem;
+                    font-weight: 700;
+                    margin: .7rem .8rem;
+                    text-transform: uppercase;
+
+                    a {
+                        color: $gl__dark;
+                        text-decoration: none;
+                        @include animate( color, 250ms );
+
+                        &:active {
+                            color: $gl__light;
+                        }
+                        &:hover {
+                            color: $gl__light;
+                        }
+                    }
+                }
+            }
+
+            ul.icon-links {
+                align-items: center;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                list-style: none;
+                padding: 0;
+
+                li {
+                    margin: .7rem .9rem;
+                    width: calc(33% - 1.8rem);
+                    
+                    a {
+                        color: $gl__light;
+                        display: block;
+                        font-size: 1.1rem;
+                        text-align: center;
+                        text-decoration: none;
+                        width: 100%;
+                        @include animate( all, 250ms );
+
+                        svg {
+                            border: solid 2px $gl__light;
+                            border-radius: 1.5rem;
+                            padding: .5rem;
+                            @include animate( all, 250ms );
+                            .dark, .light {
+                                @include animate( all, 250ms );
+                            }
+                        }
+
+                        &:active {
+                            color: $gl__grey-medium;
+
+                            svg {
+                                border-color: $gl__grey-medium;
+                                fill: $gl__grey-medium;
+                                .dark, .light {
+                                    fill: $gl__grey-medium;
+                                }
+                            }
+                        }
+                        &:hover {
+                            color: $gl__grey-medium;
+
+                            svg {
+                                border-color: $gl__grey-medium;
+                                fill: $gl__grey-medium;
+                                .dark, .light {
+                                    fill: $gl__grey-medium;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+
+        .community-partners {
+            padding: 3rem 0;
+
+            h2 {
+                color: $gl__grey-medium;
+                font-size: 2.4rem;
+                font-weight: 400;
+                padding-bottom: 1.4rem;
+                text-align: center;
+            }
+
+            p {
+                color: $gl__grey-medium;
+                font-size: 1.1rem;
+                letter-spacing: .1rem;
+                text-align: center;
+
+                a {
+                    color: $gl__dark;
+                    font-weight: 700;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    @include animate( color, 250ms );
+
+                    &:active {
+                        color: $gl__light;
+                    }
+                    &:hover {
+                        color: $gl__light;
+                    }
+                }
+            }
+        }
+    }
+
+    &.show {
+        transform: translateY(0);
+    }
+}
+
+.modal-signin {
+    background: rgba(0, 0, 0, .9);
+    inset: 0;
+    position: absolute;
+    transform: translateY(-100vh);
+    z-index: 99;
+    @include animate( transform, 500ms );
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 2rem;
+        position: relative;
+        width: 100%;
+
+        button.signin-close {
+            align-self: flex-end;
+            background: none;
+            border: solid 2px $gl__red;
+            border-radius: .75rem;
+            margin-top: .5rem;
+            padding: 0;
+
+            svg {
+                fill: $gl__red;
+                margin-bottom: -4px;
+                width: 2.4rem;
+            }
+
+            &:active, &:focus {
+                background: $gl__red;
+
+                svg {
+                    fill: black;
+                }
+            }
+        }
+
+        .signin-content {
+            display: flex;
+            flex-direction: column;
+
+            h2 {
+                color: $gl__light;
+                font-size: 3rem;
+                font-weight: 400;
+                margin: 4rem 0 3rem;
+                text-align: center;
+                text-shadow: 1px 1px 2px black, 0 0 0.2em black;
+            }
+
+            form.login-form {
+                border: solid 2px $gl__light;
+                border-radius: 1rem;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                padding: 2rem;
+                width: 100%;
+
+                label {
+                    flex: 0 100%;
+                    margin: 1rem 0;
+
+                    span {
+                        color: $gl__light;
+                        display: block;
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                        margin-bottom: 1rem;
+                        text-align: left;
+                        width: 100%;
+                    }
+
+                    input {
+                        background: $gl__white;
+                        border: solid 2px $gl__light;
+                        border-radius: .5rem;
+                        padding: 1rem 1rem;
+                        width: 100%;
+                    }
+                }
+
+                button {
+                    background: rgba($gl__light, 1);
+                    border: solid 1px $gl__white;
+                    border-radius: .5rem;
+                    color: $gl__white;
+                    display: block;
+                    font-size: 1.4rem;
+                    margin: 3rem 0 1rem;
+                    padding: .75rem 3rem;
+                    text-align: center;
+                    text-decoration: none;
+                    width: fit-content;
+                    @include animate( all, 250ms );
+
+                    &:active, &:hover {
+                        background: rgba($gl__light, .7);
+                    }
+                }
+            }
+        }
+    }
+
+    &.show {
+        transform: translateY(0);
+    }
+
+}
+
+.modal-search {
+    background: rgba(0, 0, 0, .9);
+    inset: 0;
+    position: absolute;
+    transform: translateY(-100vh);
+    z-index: 99;
+    @include animate( transform, 500ms );
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 2rem;
+        position: relative;
+        width: 100%;
+
+        button.search-close {
+            align-self: flex-end;
+            background: none;
+            border: solid 2px $gl__red;
+            border-radius: .75rem;
+            margin-top: .5rem;
+            padding: 0;
+
+            svg {
+                fill: $gl__red;
+                margin-bottom: -4px;
+                width: 2.4rem;
+            }
+
+            &:active, &:focus {
+                background: $gl__red;
+
+                svg {
+                    fill: black;
+                }
+            }
+        }
+
+        .search-content {
+            display: flex;
+            flex-direction: column;
+
+            h2 {
+                color: $gl__dark;
+                font-size: 2.4rem;
+                font-weight: 400;
+                margin: 3rem 0 2rem;
+                text-align: left;
+                text-shadow: 1px 1px 2px black, 0 0 0.2em black;
+            }
+
+            form.search-form {
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+               
+                input {
+                    background: $gl__white;
+                    border: solid 2px $gl__light;
+                    border-radius: .5rem;
+                    flex: 1;
+                    padding: .5rem 1rem;
+                }
+
+                button {
+                    background: rgba($gl__light, 1);
+                    border: solid 1px $gl__white;
+                    border-radius: .5rem;
+                    color: $gl__white;
+                    font-size: 1.4rem;
+                    margin: 0 0 0 .5rem;
+                    padding: .25rem 1.5rem;
+                    text-align: center;
+                    text-decoration: none;
+                    width: fit-content;
+                    @include animate( all, 250ms );
+
+                    &:active, &:hover {
+                        background: rgba($gl__light, .7);
+                    }
+                }
+            }
+        }
+    }
+
+    &.show {
+        transform: translateY(0);
+    }
+
+}
+
+@media screen and (min-width: 360px) {
+    
+}
+
+@media screen and (min-width: 375px) {
+    
+}
+
+@media screen and (min-width: 410px) {
+    
+}
+
+@media screen and (min-width: 425px) {
+    
+}
+
+@media screen and (min-width: 540px) {
+    
+}
+
+@media screen and (min-width: 768px) {
+    
+}
+
+@media screen and (min-width: 820px) {
+    
+}
+
+@media screen and (min-width: 1024px) {
+    
+}
+
+@media screen and (min-width: 1280px) {
+    
+}
+
+@media screen and (min-width: 1440px) {
+
+}
+
+@media screen and (min-width: 1600px) {
+
+}
+
+@media screen and (min-width: 1920px) {
+
+}

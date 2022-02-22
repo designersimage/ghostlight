@@ -1,0 +1,124 @@
+/*
+ *  --------------------------------------------------
+ *  |   MAIN PAGE HEADER STYLES                      |
+ *  --------------------------------------------------
+ *  Project: Ghost Light Perfomance, Inc.
+ *  Author: Jonathan Wheeler
+*/
+
+header.page-head {
+
+    .container {
+        align-items: flex-start;
+        display: flex;
+        height: 100%;
+        justify-content: space-between;
+        padding: 2rem;
+        position: relative;
+        width: 100%;
+
+        a.logo-link {
+            display: block;
+            flex: 0 60px;
+            justify-self: flex-start;
+        }
+
+        ul.head-links {
+            align-items: flex-start;
+            color: $gl__white;
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+            padding: 0;
+
+            li {
+                margin-left: 2rem;
+
+                a {
+                    align-items: center;
+                    color: $gl__white;
+                    display: flex;
+                    justify-content: flex-end;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    @include animate( color, 250ms );
+
+                    span {
+                        display: none;
+                        margin-left: .3rem;
+                    }
+
+                    svg {
+                        fill: $gl__grey-light;
+                        width: 3rem;
+                        @include animate( fill, 250ms );
+                    }
+
+                    &:active {
+                        color: $gl__light;
+
+                        svg {
+                            fill: $gl__light;
+                        }
+                    }
+
+                    &:hover {
+                        color: $gl__light;
+
+                        svg {
+                            fill: $gl__light;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 360px) {
+    
+}
+
+@media screen and (min-width: 375px) {
+    
+}
+
+@media screen and (min-width: 410px) {
+    
+}
+
+@media screen and (min-width: 425px) {
+    
+}
+
+@media screen and (min-width: 540px) {
+    
+}
+
+@media screen and (min-width: 768px) {
+    
+}
+
+@media screen and (min-width: 820px) {
+    
+}
+
+@media screen and (min-width: 1024px) {
+    
+}
+
+@media screen and (min-width: 1280px) {
+    
+}
+
+@media screen and (min-width: 1440px) {
+
+}
+
+@media screen and (min-width: 1600px) {
+
+}
+
+@media screen and (min-width: 1920px) {
+
+}
