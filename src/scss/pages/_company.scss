@@ -24,6 +24,44 @@
         transform: translateX(0);
         @include animate( all, 250ms );
 
+        h1 {
+            color: white;
+            font-size: 2rem;
+            font-weight: 400;
+            margin: 0 0 1rem;
+            text-shadow: 1px 1px 1px black;
+        }
+
+        nav.page-links {
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0 0 2rem;
+
+            a {
+                color: $gl__light;
+                font-weight: 600;
+                margin: .5rem .7rem;
+                text-decoration: none;
+                text-shadow: 1px 1px 1px black;
+                text-transform: uppercase;
+                white-space: nowrap;
+                @include animate( color, 250ms );
+
+                &:active, &:hover {
+                    color: $gl__dark;
+                }
+            }
+        }
+
+        p {
+            color: $gl__white;
+            font-size: 1.2rem;
+            margin: 0 0 1.5rem;
+            text-shadow: 1px 1px 1px black;
+        }
+
         &.hide {
             display: none;
         }
@@ -53,7 +91,10 @@
 @media screen and (min-width: 360px) {
     .company {
         .about-content {
-    
+            h1 {
+                font-size: 2.4rem;
+                margin: 5rem 0 2rem;
+            }
         }
     }
 }
@@ -64,7 +105,10 @@
         background-size: cover;
 
         .about-content {
-    
+            h1 {
+                font-size: 2.4rem;
+                margin: 4rem 0 2rem;
+            }
         }
     }
 }
@@ -75,7 +119,10 @@
         background-size: cover;
 
         .about-content {
-    
+            h1 {
+                font-size: 2.8rem;
+                margin: 6rem 0 2rem;
+            }
         }
     }
 }
@@ -85,12 +132,7 @@
 }
 
 @media screen and (min-width: 425px) {
-    .company {
-        
-        .about-content {
-
-        }
-    }
+    
 }
 
 @media screen and (min-width: 540px) {

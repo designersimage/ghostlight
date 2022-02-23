@@ -5,9 +5,7 @@
  *  Project: Ghost Light Perfomance, Inc.
  *  Author: Jonathan Wheeler
 */
-
-import { pause } from "browser-sync";
-
+import { pageEl, pageContentEl, direction } from "../main";
 
 /**
  * A function for getting all links on page to navigation direction.
@@ -20,8 +18,6 @@ export const getPageLinks = () => {
     const closeMenuBtn = document.querySelector('button.menu-close');
     const closeSigninBtn = document.querySelector('button.signin-close');
     const closeSearchBtn = document.querySelector('button.search-close');
-    const pageEl = document.querySelector('body > section');
-    const pageContentEl = document.querySelector('body > section > main');
 
     /* Loop through links list */
     pageLinks.forEach(link => {
@@ -124,23 +120,16 @@ export const getPageLinks = () => {
  */
 export const loadPageContent = async () => {
     const basename = window.location.pathname;
-    const pageEl = document.querySelector('body > section');
-    const pageContentEl = document.querySelector('body > section > main');
-    
-    if (direction == 'back' && direction == 'forward') {
-        pageEl.classList.add('hide');
-        return;
-    }
 
     switch(basename) {
         case '/':
         case '/index.html':
-            await loadHomePage(direction, pageEl, pageContentEl);
+            await loadHomePage();
             break;
 
         case '/company/':
         case '/company/index.html':
-            await loadAboutPage(direction, pageEl, pageContentEl);
+            await loadAboutPage();
             break;
 
         default:
@@ -159,7 +148,12 @@ export const loadPageContent = async () => {
     }
     
     setTimeout(() => {
-        
+        if (pageEl.classList.contains('hide')) {
+            pageEl.classList.remove('hide');
+        }
+    }, 250);
+
+    setTimeout(() => {
         if (pageEl.classList.contains('right')) {
             pageEl.classList.remove('right');
         }
@@ -176,13 +170,13 @@ export const loadPageContent = async () => {
             pageContentEl.classList.remove('left');
     
         }
-    }, 500)
+    }, 500);
     
 }
 
 
 
-const loadHomePage = async (direction, pageEl, pageContentEl) => {
+const loadHomePage = async () => {
     const pagesData = JSON.parse(sessionStorage.getItem('pages'));
     const homePage = pagesData.find(page => page.slug === 'home');
     const contentEl = document.querySelector('main.home-content > .container');
@@ -217,13 +211,9 @@ const loadHomePage = async (direction, pageEl, pageContentEl) => {
 
     contentEl.append(titleEl);
     contentEl.append(mainContentEl);
-
-    if (pageEl.classList.contains('hide')) {
-        pageEl.classList.remove('hide');
-    }
 }
 
-const loadAboutPage = async (direction, pageEl, pageContentEl) => {
+const loadAboutPage = async () => {
     const pagesData = JSON.parse(sessionStorage.getItem('pages'));
     const aboutPage = pagesData.find(page => page.slug === 'about');
     const contentEl = document.querySelector('main.about-content > .container');
@@ -258,8 +248,4 @@ const loadAboutPage = async (direction, pageEl, pageContentEl) => {
 
     contentEl.append(titleEl);
     contentEl.append(mainContentEl);
-
-    if (pageEl.classList.contains('hide')) {
-        pageEl.classList.remove('hide');
-    }
 }

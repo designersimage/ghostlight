@@ -20,14 +20,14 @@ export const pages = [
         id: 2,
         slug: 'about',
         title: `About Our Company`,
-        content: `<div id="page-links">
-                    <a href="team.html" class="group-forward" title="Our Team">Our Team</a>
-                    <a href="private_training.html" class="group-forward" title="Private Training">Private Training</a>
-                    <a href="showcases.html" class="group-forward" title="Showcases">Showcases</a>
-                    <a href="offers.html" class="group-forward" title="Special Offers">Special Offers</a>
-                    <a href="industry_services.html" class="group-forward" title="Industry Services">Industry Services</a>
-                    <a href="../community_partners/" class="forward" title="Community Partners">Community Partners</a>
-                </div>
+        content: `<nav class="page-links">
+                    <a href="team.html" data-nav="group-forward" title="Our Team">Our Team</a>
+                    <a href="private_training.html" data-nav="group-forward" title="Private Training">Private Training</a>
+                    <a href="showcases.html" data-nav="group-forward" title="Showcases">Showcases</a>
+                    <a href="offers.html" data-nav="group-forward" title="Special Offers">Special Offers</a>
+                    <a href="industry_services.html" data-nav="group-forward" title="Industry Services">Industry Services</a>
+                    <a href="../community_partners/" data-nav="forward" title="Community Partners">Community Partners</a>
+                </nav>
                 <p>In the theatre world, a ghost light is left shining onstage when a theatre is not in use. It helps to enable those entering and 
                     exiting the dark performance space before the main lights have been turned on or after they have been shut off. The ghost light 
                     origin is shrouded in many superstitions, from stories of appeasing theatre ghosts to more practical explanations of avoiding 
