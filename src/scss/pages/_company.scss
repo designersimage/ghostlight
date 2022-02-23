@@ -1,0 +1,163 @@
+/*
+ *  --------------------------------------------------
+ *  |   COMPANY PAGES STYLES                         |
+ *  --------------------------------------------------
+ *  Project: Ghost Light Perfomance, Inc.
+ *  Author: Jonathan Wheeler
+*/
+
+.company {
+    background: url('../assets/images/company_bg.jpg') repeat  right 25% top fixed;
+    background-size: cover;
+    transform: translateX(0);
+    @include animate( all, 250ms );
+
+    &::before {
+        background-image: linear-gradient(to right, rgba(0, 0, 0, .95),rgba(0, 0, 0, .35) 50%);
+        content: '';
+        inset: 0;
+        position: absolute;
+    }
+
+    .about-content {
+        margin-top: 2rem;
+        transform: translateX(0);
+        @include animate( all, 250ms );
+
+        &.hide {
+            display: none;
+        }
+        
+        &.right {
+            transform: translateX(100vw);
+        }
+        &.left {
+            transform: translateX(-100vw);
+        }
+
+    }
+
+    &.hide {
+        display: none;
+    }
+    
+    &.right {
+        transform: translateX(100vw);
+    }
+    &.left {
+        transform: translateX(-100vw);
+    }
+
+}
+
+@media screen and (min-width: 360px) {
+    .company {
+        .about-content {
+    
+        }
+    }
+}
+
+@media screen and (min-width: 375px) {
+    .company {
+        background: url('../assets/images/company_bg.jpg') repeat  right 50% top fixed;
+        background-size: cover;
+
+        .about-content {
+    
+        }
+    }
+}
+
+@media screen and (min-width: 390px) {
+    .company {
+        background: url('../assets/images/company_bg.jpg') repeat  right 45% top fixed;
+        background-size: cover;
+
+        .about-content {
+    
+        }
+    }
+}
+
+@media screen and (min-width: 410px) {
+    
+}
+
+@media screen and (min-width: 425px) {
+    .company {
+        
+        .about-content {
+
+        }
+    }
+}
+
+@media screen and (min-width: 540px) {
+    .company {
+        background: url('../assets/images/company_bg.jpg') repeat  right 50% top fixed;
+        background-size: cover;
+
+        .about-content {
+    
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .company {
+        .about-content {
+    
+        }
+    }
+}
+
+@media screen and (min-width: 820px) {
+    .company {
+        .about-content {
+    
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .company {
+        .about-content {
+    
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .company {
+        background: url('../assets/images/company_bg.jpg') repeat  right 50% top fixed;
+        background-size: cover;
+        @include animate( all, 500ms );
+
+        .about-content {
+            @include animate( all, 500ms );
+            
+    
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .company {
+        .about-content {
+    
+        }
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .company {
+        .about-content {
+    
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    
+}

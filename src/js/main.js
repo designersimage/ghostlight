@@ -8,14 +8,13 @@
 import { getPageLinks, loadPageContent, loadWebsiteData, preloadImages } from './modules/utils';
 
 /* Execute preload before DOM is ready */
-preloadImages(['ghostlight_bg.png', 'ghostlight_logo.png', 'home_bg.jpg']);
+preloadImages(['ghostlight_bg.png', 'ghostlight_logo.png', 'home_bg.jpg', 'company_bg.jpg']);
 
 /* Execute before DOM is ready */
 loadWebsiteData();
 
 /* Execute when page is ready */
 ready((e) => {
-    
     loadPageContent();
     getPageLinks();
 

@@ -10,6 +10,7 @@
 .home {
     background: url('../assets/images/home_bg.jpg') repeat  right 45% top fixed;
     background-size: cover;
+    transform: translateX(0);
     @include animate( all, 250ms );
 
     &::before {
@@ -21,6 +22,7 @@
 
     .home-content {
         margin-top: 2rem;
+        transform: translateX(0);
         @include animate( all, 250ms );
 
         h1 {
@@ -116,23 +118,95 @@
         display: none;
     }
     
-    .right {
+    &.right {
         transform: translateX(100vw);
     }
-    .left {
+    &.left {
         transform: translateX(-100vw);
     }
 
 }
 
 @media screen and (min-width: 360px) {
+    .home {
+        .home-content {
     
+            h1 {
+                font-size: 2.4rem;
+                margin: 5rem 0 2rem;
+            }
+    
+            p {
+                color: $gl__white;
+                font-size: 1.4rem;
+                padding: 2rem 0;
+            }
+    
+            a.about-link {
+                font-size: 1.8rem;
+                margin: 3rem 0;
+                padding: 1rem 3rem;
+            }
+    
+            a.workshop-link {
+                font-size: 1.8rem;
+                margin: 2rem 0;
+            }
+    
+            a.special-link {
+                font-size: 1.2rem;
+                text-align: left;
+            }
+    
+            p.footer-info {
+                font-size: 1.4rem;
+            }
+    
+        }
+    }
 }
 
 @media screen and (min-width: 375px) {
     .home {
         background: url('../assets/images/home_bg.jpg') repeat  right 50% top fixed;
         background-size: cover;
+
+        .home-content {
+    
+            h1 {
+                font-size: 2.4rem;
+                margin: 4rem 0 2rem;
+                width: 90%;
+            }
+    
+            p {
+                color: $gl__white;
+                font-size: 1.4rem;
+                padding: 2rem 0;
+            }
+    
+            a.about-link {
+                font-size: 1.8rem;
+                margin: 3rem 0;
+                padding: 1rem 3rem;
+            }
+    
+            a.workshop-link {
+                font-size: 1.8rem;
+                margin: 2rem 0;
+            }
+    
+            a.special-link {
+                font-size: 1.2rem;
+                text-align: left;
+                width: 90%;
+            }
+    
+            p.footer-info {
+                font-size: 1.4rem;
+            }
+    
+        }
     }
 }
 
@@ -140,6 +214,43 @@
     .home {
         background: url('../assets/images/home_bg.jpg') repeat  right 45% top fixed;
         background-size: cover;
+
+        .home-content {
+    
+            h1 {
+                font-size: 2.8rem;
+                margin: 6rem 0 2rem;
+                width: 100%;
+            }
+    
+            p {
+                color: $gl__white;
+                font-size: 1.6rem;
+                padding: 2rem 0;
+            }
+    
+            a.about-link {
+                font-size: 2.1rem;
+                margin: 3rem 0;
+                padding: 1rem 3rem;
+            }
+    
+            a.workshop-link {
+                font-size: 2.1rem;
+                margin: 2rem 0;
+            }
+    
+            a.special-link {
+                font-size: 1.4rem;
+                text-align: left;
+                width: 90%;
+            }
+    
+            p.footer-info {
+                font-size: 1.6rem;
+            }
+    
+        }
     }
 }
 
@@ -148,41 +259,323 @@
 }
 
 @media screen and (min-width: 425px) {
+    .home {
+        
+        .home-content {
     
+            h1 {
+                width: 95%;
+            }
+    
+        }
+    }
 }
 
 @media screen and (min-width: 540px) {
-    .home-content {
+    .home {
         background: url('../assets/images/home_bg.jpg') repeat  right 50% top fixed;
         background-size: cover;
+
+        .home-content {
+    
+            h1 {
+                font-size: 2.8rem;
+                margin: 3rem 0 2rem;
+                width: 70%;
+            }
+    
+            p {
+                color: $gl__white;
+                font-size: 1.6rem;
+                padding: 2rem 0;
+                width: 80%;
+            }
+    
+            a.about-link {
+                font-size: 2.1rem;
+                margin: 3rem 0;
+                padding: 1rem 3rem;
+            }
+    
+            a.workshop-link {
+                font-size: 2.1rem;
+                margin: 2rem 0;
+            }
+    
+            a.special-link {
+                font-size: 1.4rem;
+                text-align: left;
+                width: 70%;
+            }
+    
+            p.footer-info {
+                font-size: 1.6rem;
+            }
+    
+        }
     }
 }
 
 @media screen and (min-width: 768px) {
+    .home {
+        .home-content {
     
+            h1 {
+                font-size: 3.2rem;
+                margin: 6rem 0 2rem;
+                width: 55%;
+            }
+    
+            p {
+                color: $gl__white;
+                font-size: 1.8rem;
+                padding: 2rem 0;
+                width: 50%;
+            }
+    
+            a.about-link {
+                font-size: 2.1rem;
+                margin: 3rem 0 4rem;
+                padding: 1rem 3rem;
+            }
+    
+            a.workshop-link {
+                font-size: 2.1rem;
+                margin: 3rem 0;
+            }
+    
+            a.special-link {
+                font-size: 1.4rem;
+                text-align: left;
+                width: 50%;
+            }
+    
+            p.footer-info {
+                font-size: 1.6rem;
+            }
+    
+        }
+    }
 }
 
 @media screen and (min-width: 820px) {
-   
+    .home {
+        .home-content {
+    
+            h1 {
+                font-size: 3.6rem;
+                margin: 6rem 0 2rem;
+                width: 57%;
+            }
+    
+            p {
+                color: $gl__white;
+                font-size: 2.1rem;
+                padding: 2rem 0;
+                width: 50%;
+            }
+    
+            a.about-link {
+                font-size: 2.4rem;
+                margin: 3rem 0 4rem;
+                padding: 1rem 3rem;
+            }
+    
+            a.workshop-link {
+                font-size: 2.8rem;
+                margin: 3rem 0;
+            }
+    
+            a.special-link {
+                font-size: 1.6rem;
+                margin: 3rem 0 1rem;
+                text-align: left;
+                width: 50%;
+            }
+    
+            p.footer-info {
+                font-size: 1.8rem;
+            }
+    
+        }
+    }
 }
 
 @media screen and (min-width: 1024px) {
+    .home {
+        .home-content {
     
+            h1 {
+                font-size: 3.6rem;
+                margin: 6rem 0 2rem;
+                width: 47%;
+            }
+    
+            p {
+                color: $gl__white;
+                font-size: 2.1rem;
+                padding: 2rem 0;
+                width: 50%;
+            }
+    
+            a.about-link {
+                font-size: 2.4rem;
+                margin: 4rem 0 5rem;
+                padding: 1rem 3rem;
+            }
+    
+            a.workshop-link {
+                font-size: 2.8rem;
+                margin: 3rem 0;
+            }
+    
+            a.special-link {
+                font-size: 1.6rem;
+                margin: 3rem 0 1rem;
+                text-align: left;
+                width: 40%;
+            }
+    
+            p.footer-info {
+                font-size: 1.8rem;
+            }
+    
+        }
+    }
 }
 
 @media screen and (min-width: 1280px) {
-    .home-content {
+    .home {
         background: url('../assets/images/home_bg.jpg') repeat  right 50% top fixed;
         background-size: cover;
+        @include animate( all, 500ms );
+
+        .home-content {
+            @include animate( all, 500ms );
+
+            h1 {
+                font-size: 3.2rem;
+                margin: 3rem 0 2rem;
+                width: 31.5%;
+            }
+    
+            p {
+                color: $gl__white;
+                font-size: 1.6rem;
+                padding: 2rem 0;
+                width: 33%;
+            }
+    
+            a.about-link {
+                font-size: 2.1rem;
+                margin: 3rem 0 4rem;
+                padding: 1rem 3rem;
+            }
+    
+            a.workshop-link {
+                font-size: 1.8rem;
+                margin: 3rem 0;
+            }
+    
+            a.special-link {
+                font-size: 1.3rem;
+                margin: 3rem 0 1rem;
+                text-align: left;
+                width: 23%;
+            }
+    
+            p.footer-info {
+                font-size: 1.6rem;
+            }
+    
+        }
     }
 }
 
 @media screen and (min-width: 1440px) {
-
+    .home {
+        .home-content {
+    
+            h1 {
+                font-size: 3.6rem;
+                margin: 4rem 0 2rem;
+                width: 31%;
+            }
+    
+            p {
+                color: $gl__white;
+                font-size: 1.6rem;
+                padding: 1rem 0;
+                width: 33%;
+            }
+    
+            a.about-link {
+                font-size: 2.1rem;
+                margin: 4rem 0 4rem;
+                padding: 1rem 3rem;
+            }
+    
+            a.workshop-link {
+                font-size: 1.8rem;
+                margin: 3rem 0;
+            }
+    
+            a.special-link {
+                font-size: 1.3rem;
+                margin: 3rem 0 1rem;
+                text-align: left;
+                width: 22%;
+            }
+    
+            p.footer-info {
+                font-size: 1.6rem;
+            }
+    
+        }
+    }
 }
 
 @media screen and (min-width: 1600px) {
-
+    .home {
+        .home-content {
+    
+            h1 {
+                font-size: 3.6rem;
+                margin: 4rem 0 3rem;
+                width: 30%;
+            }
+    
+            p {
+                color: $gl__white;
+                font-size: 1.8rem;
+                padding: 1rem 0;
+                width: 30%;
+            }
+    
+            a.about-link {
+                font-size: 2.1rem;
+                margin: 4rem 0 4rem;
+                padding: 1rem 3rem;
+            }
+    
+            a.workshop-link {
+                font-size: 2.1rem;
+                margin: 3rem 0;
+            }
+    
+            a.special-link {
+                font-size: 1.4rem;
+                margin: 3rem 0 1rem;
+                text-align: left;
+                width: 22%;
+            }
+    
+            p.footer-info {
+                font-size: 1.6rem;
+            }
+    
+        }
+    }
 }
 
 @media screen and (min-width: 1920px) {

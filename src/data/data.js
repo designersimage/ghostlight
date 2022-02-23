@@ -11,11 +11,38 @@ export const pages = [
         slug: 'home',
         title: `Illuminating Possibilities with Performance Training.`,
         content: `<p>The <span class="current-year"></span> Ghost Light Schedule includes full-experience workshops in both Acting and Modeling for Introductory through Advanced levels utilizing Industry Insights to educate and prepare you for a successful career.</p>
-        <a href="company/" class="about-link" data-nav="forward" title="About Ghost Light">Learn about Ghost Light</a>
-        <a href="workshops/" class="workshop-link" data-nav="forward" title="See Workshops & Pricing">See workshops &amp; pricing &raquo;</a>
-        <a href="company/offers.html" class="special-link" data-nav="forward" title="Special Offers">View <em>special offers</em> for students and community members, as well as scholorship opportunities.</a>
-        <p class="footer-info">Ghost Light Performance Inc. &copy; <span class="current-year"></span></p>`
+                <a href="company/" class="about-link" data-nav="forward" title="About Ghost Light">Learn about Ghost Light</a>
+                <a href="workshops/" class="workshop-link" data-nav="forward" title="See Workshops & Pricing">See workshops &amp; pricing &raquo;</a>
+                <a href="company/offers.html" class="special-link" data-nav="forward" title="Special Offers">View <em>special offers</em> for students and community members, as well as scholorship opportunities.</a>
+                <p class="footer-info">Ghost Light Performance Inc. &copy; <span class="current-year"></span></p>`
     },
+    {
+        id: 2,
+        slug: 'about',
+        title: `About Our Company`,
+        content: `<div id="page-links">
+                    <a href="team.html" class="group-forward" title="Our Team">Our Team</a>
+                    <a href="private_training.html" class="group-forward" title="Private Training">Private Training</a>
+                    <a href="showcases.html" class="group-forward" title="Showcases">Showcases</a>
+                    <a href="offers.html" class="group-forward" title="Special Offers">Special Offers</a>
+                    <a href="industry_services.html" class="group-forward" title="Industry Services">Industry Services</a>
+                    <a href="../community_partners/" class="forward" title="Community Partners">Community Partners</a>
+                </div>
+                <p>In the theatre world, a ghost light is left shining onstage when a theatre is not in use. It helps to enable those entering and 
+                    exiting the dark performance space before the main lights have been turned on or after they have been shut off. The ghost light 
+                    origin is shrouded in many superstitions, from stories of appeasing theatre ghosts to more practical explanations of avoiding 
+                    pressure build up in gas lines before the advent of electricity, but the modern application is one of safety and guidance.</p>
+                <p>In our journey of starting a training program for performers of all ages, types, and skill levels, the ghost light revealed itself 
+                    as a comforting and universal symbol of what it is to be a performer. There is always a light on in the theatre. There is always 
+                    energy in the space. There is always work to be done and discoveries to be made, even when the house is closed. For this reason, 
+                    we chose to take this hauntingly appropriate image as our mascot.</p>
+                <p>Through our training program, we seek to enrich, educate, and prepare performers to further their artistic endeavors and careers by 
+                    offering training, management, and the tools to succeed in the professional industry. We strive to create a foundation of freedom 
+                    and discipline, fun and instruction, emotional safety and artistic daring, an environment that reflects the nature of the 
+                    entertainment industry itself. We hope to develop actors and models who not only shine when the show is in full swing, but also 
+                    keep their light ablaze when preparing quietly on their own for that next big performance.</p>
+                <p>We are Ghost Light Performance, Inc. Let us help to guide you through the dark.</p>`
+    }
 ]
 
 export const team = [

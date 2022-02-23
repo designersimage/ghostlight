@@ -15,6 +15,7 @@
     @include animate( transform, 500ms );
 
     .container {
+        align-items: center;
         display: flex;
         flex-direction: column;
         height: 100%;
@@ -233,8 +234,7 @@
             }
 
             form.login-form {
-                border: solid 2px $gl__light;
-                border-radius: 1rem;
+                border-top: solid 2px $gl__light;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: flex-end;
@@ -345,8 +345,10 @@
             }
 
             form.search-form {
+                border-bottom: solid 2px $gl__dark;
                 display: flex;
                 justify-content: flex-end;
+                padding: 0 0 3rem 0;
                 width: 100%;
                
                 input {
@@ -385,15 +387,194 @@
 }
 
 @media screen and (min-width: 360px) {
+    .modal-nav {
+        .container {
+            padding: inherit 3rem;
     
+            button.menu-close {
+                border: solid 2px $gl__red;
+                border-radius: .75rem;
+                margin-top: .5rem;
+                padding: 0;
+    
+                svg {
+                    margin-bottom: -4px;
+                    width: 3rem;
+                }
+            }
+
+            .main-links {
+                border-bottom: solid 2px $gl__light;
+                padding-bottom: 2rem;
+
+                ul.text-links {
+                    align-items: center;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    padding: 1.5rem 0 .5rem;
+
+                    li {
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                        margin: .7rem 1rem;
+                    }
+                }
+
+                ul.icon-links {
+                    li {
+                        margin: 1.2rem 1.2rem;
+                        width: calc(33% - 2.4rem);
+                        
+                        a {
+                            font-size: 1.4rem;
+    
+                            svg {
+                                border: solid 2px $gl__light;
+                                border-radius: 1.5rem;
+                                padding: .5rem;
+                            }
+
+                        }
+                        
+                    }
+                }
+            }
+
+            .community-partners {
+                padding: 3rem 0;
+    
+                h2 {
+                    font-size: 3rem;
+                    padding-bottom: 1.4rem;
+                }
+    
+                p {
+                    font-size: 1.4rem;
+    
+                    a {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
+    .modal-signin, .modal-search {
+        .container {
+            padding: inherit 3rem;
+        }
+    }
+
+    .modal-search {
+        .container {
+            
+            .search-content {
+                padding: 0 1rem;
+                h2 {
+                    font-size: 2.4rem;
+                    margin: 3rem 0 2rem;
+                    padding: 0 1rem;
+                }
+    
+                form.search-form {
+                    padding: 0 1rem 3rem;
+                    width: 100%;
+                }
+            }
+        }
+    
+    }
 }
 
 @media screen and (min-width: 375px) {
+    .modal-nav {
+        .container {
+
+            .main-links {
+
+                ul.text-links {
+                    padding: 1rem 0 0;
+
+                    li {
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                        margin: .7rem 1.2rem;
+                    }
+                }
+
+                ul.icon-links {
+                    li {
+                        margin: 1.2rem 1.6rem;
+                        width: calc(33% - 3.2rem);
+                        
+                        a {
+                            font-size: 1.4rem;
+    
+                            svg {
+                                border: solid 2px $gl__light;
+                                border-radius: 1.5rem;
+                                padding: .5rem;
+                            }
+
+                        }
+                        
+                    }
+                }
+            }
+
+            .community-partners {
+    
+                p {
+                    line-height: 1.7;
+                }
+            }
+        }
+    }
+
+    .modal-search {
+        .container {
+            
+            .search-content {
+                padding: 0 2rem;
+                h2 {
+                    font-size: 2.4rem;
+                    margin: 3rem 0 2rem;
+                    padding: 0 1rem;
+                }
+    
+                form.search-form {
+                    padding: 0 1rem 3rem;
+                    width: 100%;
+                }
+            }
+        }
+    
+    }
     
 }
 
 @media screen and (min-width: 410px) {
+    .modal-nav {
+        .container {
+
+            .community-partners {
+                padding: 3rem 0;
     
+                h2 {
+                    font-size: 3.2rem;
+                    padding-bottom: 1.4rem;
+                }
+    
+                p {
+                    font-size: 1.5rem;
+    
+                    a {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 425px) {
@@ -401,33 +582,489 @@
 }
 
 @media screen and (min-width: 540px) {
+    .modal-nav {
+        .container {
+
+            .main-links {
+
+                ul.text-links {
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    padding: 2rem 0 0;
+
+                    li {
+                        font-size: 1.25rem;
+                        font-weight: 600;
+                        margin: .7rem unset;
+                        white-space: nowrap;
+                    }
+                }
+
+                ul.icon-links {
+                    li {
+                        margin: 1.6rem 2.4rem;
+                        width: calc(33% - 8rem);
+                        
+                        a {
+                            font-size: 1.3rem;
     
+                            svg {
+                                border: solid 2px $gl__light;
+                                border-radius: 1.5rem;
+                                padding: .5rem;
+                            }
+
+                        }
+                        
+                    }
+                }
+            }
+
+            .community-partners {
+    
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
+    .modal-signin {
+    
+        .container {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            padding: 2rem;
+            position: relative;
+            width: 100%;
+        }
+
+        .signin-content {
+            width: 35rem;
+        }
+
+    }
+
+    .modal-search {
+    
+        .container {
+    
+            .search-content {
+    
+                form.search-form {
+                    justify-content: flex-start;
+
+                    input {
+                        border-radius: .5rem;
+                        flex: 0 20rem;
+                        padding: .5rem 1rem;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 768px) {
+    .modal-nav {
+        .container {
+            padding: 4rem;
+
+            button.menu-close {
+                border: solid 2px $gl__red;
+                border-radius: .75rem;
+                // margin-top: .5rem;
+                padding: 0;
     
+                svg {
+                    margin-bottom: -4px;
+                    width: 3.2rem;
+                }
+            }
+
+            .main-links {
+                margin-bottom: 2rem;
+                padding-bottom: 4rem;
+                width: 94%;
+
+                ul.text-links {
+                    padding: 3rem 0 1rem;
+                    width: 100%;
+
+                    li {
+                        font-size: 1.6rem;
+                        font-weight: 600;
+                        margin: .7rem unset;
+                    }
+                }
+
+                ul.icon-links {
+                    li {
+                        margin: 2.4rem 3.2rem;
+                        width: calc(33% - 10rem);
+                        
+                        a {
+                            font-size: 1.6rem;
+    
+                            svg {
+                                border: solid 2px $gl__light;
+                                border-radius: 1.5rem;
+                                padding: .5rem;
+                            }
+
+                        }
+                        
+                    }
+                }
+            }
+
+            .community-partners {
+                h2 {
+                    font-size: 4.8;
+                }
+                p {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+
+    .modal-signin {
+        .container {
+            padding: 4rem;
+
+            .signin-content {
+                margin-top: 10rem;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 820px) {
+    .modal-nav {
+        .container {
+            
+            .main-links {
+                ul.text-links {
+                    padding: 3rem 0 1rem;
+
+                    li {
+                        font-size: 1.75rem;
+                        font-weight: 600;
+                        margin: .7rem unset;
+                    }
+                }
+
+                ul.icon-links {
+                    width: 98%;
+                    li {
+                        margin: 2.4rem 3.2rem;
+                        width: calc(33% - 10rem);
+                        
+                        a {
+                            font-size: 1.8rem;
     
+                            svg {
+                                border: solid 2px $gl__light;
+                                border-radius: 1.5rem;
+                                padding: .5rem;
+                            }
+
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    .modal-signin {
+        .container {
+            padding: 4rem;
+
+            .signin-content {
+                margin-top: 13rem;
+            }
+        }
+    }
+
+    .modal-search {
+        .container {
+            
+            .search-content {
+                padding: 0 2rem;
+                h2 {
+                    font-size: 3.2rem;
+                    margin: 3rem 0 2rem;
+                    padding: 0 1rem;
+                }
+    
+                form.search-form {
+                    border-bottom: solid 2px $gl__dark;
+                    padding: 0 1rem 3rem;
+                    width: 100%;
+                   
+                    input {
+                        background: $gl__white;
+                        border: solid 2px $gl__light;
+                        border-radius: .5rem;
+                        flex: 0 30rem;
+                        font-size: 1.6rem;
+                        padding: .5rem 1rem;
+                    }
+    
+                    button {
+                        background: rgba($gl__light, 1);
+                        border: solid 1px $gl__white;
+                        border-radius: .5rem;
+                        color: $gl__white;
+                        font-size: 1.6rem;
+                        margin: 0 0 0 1rem;
+                        padding: .25rem 1.5rem;
+                        text-align: center;
+                        text-decoration: none;
+                        width: fit-content;
+                        @include animate( all, 250ms );
+    
+                        &:active, &:hover {
+                            background: rgba($gl__light, .7);
+                        }
+                    }
+                }
+            }
+        }
+    
+    }
 }
 
 @media screen and (min-width: 1024px) {
+    .modal-nav {
+        .container {
+            
+            .main-links {
+                width: 90%;
+
+                ul.text-links {
+                    padding: 3rem 0 1rem;
+
+                    li {
+                        font-size: 2.1rem;
+                        font-weight: 600;
+                        margin: .7rem unset;
+                    }
+                }
+
+                ul.icon-links {
+                    width: 84%;
+                    li {
+                        margin: 3.2rem 4.8rem;
+                        width: calc(33% - 10rem);
+                        
+                        a {
+                            font-size: 1.8rem;
     
+                            svg {
+                                border: solid 2px $gl__light;
+                                border-radius: 1.5rem;
+                                padding: .5rem;
+                            }
+
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 1280px) {
+    .modal-nav {
+        display: flex;
+        justify-content: center;
+
+        .container {
+            border: solid 2px $gl__light;
+            border-radius: 2rem;
+            margin: 8rem;
+            height: unset;
+            padding: 2rem;
+            width: 80%;
+
+            button.menu-close {
+                border: solid 2px $gl__red;
+                border-radius: .75rem;
+                // margin-top: .5rem;
+                padding: 0;
     
+                svg {
+                    margin-bottom: -4px;
+                    width: 3.2rem;
+                }
+            }
+
+            .main-links {
+                margin-bottom: 2rem;
+                padding-bottom: 4rem;
+                width: 94%;
+
+                ul.text-links {
+                    justify-content: space-evenly;
+                    padding: 3rem 0 0rem;
+                    width: 100%;
+
+                    li {
+                        font-size: 2rem;
+                        font-weight: 600;
+                        margin: .7rem unset;
+                    }
+                }
+
+                ul.icon-links {
+                    flex-wrap: nowrap;
+                    justify-content: space-around;
+                    margin: 0;
+                    width: 100%;
+                    
+                    li {
+                        margin: 3.2rem 0;
+                        width: unset;
+                        
+                        a {
+                            font-size: 1.8rem;
+                            width: 100%;
+
+                            span {
+                                display: block;
+                            }
+    
+                            svg {
+                                border: solid 2px $gl__light;
+                                border-radius: 1.5rem;
+                                padding: 1rem;
+                                width: 10rem
+                            }
+
+                        }
+                        
+                    }
+                }
+            }
+
+            .community-partners {
+                h2 {
+                    font-size: 4.8;
+                }
+                p {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+
+    .modal-signin {
+        .container {
+            padding: 2rem;
+
+            .signin-content {
+                margin-top: 6rem;
+            }
+        }
+    }
+
+    .modal-search {
+        .container {
+            align-items: center;
+
+            .search-content {
+                display: flex;
+                padding: 0 2rem;
+                width: 70%;
+
+                h2 {
+                    font-size: 2.8rem;
+                    margin: 3rem 0 2rem;
+                    padding: 0 1rem;
+                }
+    
+                form.search-form {
+                    padding: 0 1rem 3rem;
+                    width: 100%;
+                }
+            }
+        }
+    
+    }
 }
 
 @media screen and (min-width: 1440px) {
-
+    .modal-nav {
+        .container {
+            margin: 6rem;
+        }
+    }
 }
 
 @media screen and (min-width: 1600px) {
+    .modal-nav {
+        .container {
+            margin: 12rem;
+            width: 70%;
+        }
+    }
 
+    .modal-search {
+        .container {
+            .search-content {
+                display: flex;
+                padding: 0 2rem;
+                width: 60%;
+
+                h2 {
+                    font-size: 3.2rem;
+                    margin: 3rem 0 2rem;
+                    padding: 0 1rem;
+                }
+    
+                form.search-form {
+                    padding: 0 1rem 3rem;
+                    width: 100%;
+                }
+            }
+        }
+    
+    }
 }
 
 @media screen and (min-width: 1920px) {
+    .modal-nav {
+        .container {
+            margin: 20rem;
+            width: 60%;
+        }
+    }
 
+    .modal-search {
+        .container {
+            .search-content {
+                display: flex;
+                padding: 0 2rem;
+                width: 50%;
+
+                h2 {
+                    font-size: 3.2rem;
+                    margin: 3rem 0 2rem;
+                    padding: 0 1rem;
+                }
+    
+                form.search-form {
+                    padding: 0 1rem 3rem;
+                    width: 100%;
+                }
+            }
+        }
+    
+    }
 }

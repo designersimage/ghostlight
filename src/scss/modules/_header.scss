@@ -92,11 +92,48 @@ header.page-head {
 }
 
 @media screen and (min-width: 540px) {
+    header.page-head {
+
+        .container {
+            padding: 2rem 3rem;
     
+            a.logo-link {
+                display: block;
+                flex: 0 60px;
+                justify-self: flex-start;
+            }
+    
+            ul.head-links {
+                
+                li {
+                    margin-left: 3rem;
+    
+                    a {
+                        span {
+                            display: block;
+                            font-size: 1.6rem;
+                            margin-left: .7rem;
+                        }
+    
+                        svg {
+                            fill: $gl__grey-light;
+                            width: 2.8rem;
+                            @include animate( fill, 250ms );
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 768px) {
-    
+    header.page-head {
+
+        .container {
+            padding: 2rem 4rem;
+        }
+    }
 }
 
 @media screen and (min-width: 820px) {
@@ -108,7 +145,16 @@ header.page-head {
 }
 
 @media screen and (min-width: 1280px) {
-    
+    header.page-head {
+
+        .container {
+            padding: 2rem 4rem;
+
+            a.logo-link {
+                flex: 0 80px;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 1440px) {
@@ -120,5 +166,14 @@ header.page-head {
 }
 
 @media screen and (min-width: 1920px) {
+    header.page-head {
 
+        .container {
+            padding: 2rem 12rem;
+
+            a.logo-link {
+                flex: 0 100px;
+            }
+        }
+    }
 }

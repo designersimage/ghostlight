@@ -25,7 +25,9 @@ body {
 }
 
 @media screen and (min-width: 360px) {
-    
+    .container {
+        padding: 0 3rem;
+    }
 }
 
 @media screen and (min-width: 375px) {
@@ -52,7 +54,9 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-    
+    .container {
+        padding: 0 4rem;
+    }
 }
 
 @media screen and (min-width: 820px) {
@@ -71,6 +75,9 @@ body {
         background: rgb(0, 0, 0) url('../assets/images/ghostlight_bg.png') repeat -55% -10% fixed;
         background-size: 30%;
     }
+    .container {
+        padding: 0 4rem;
+    }
 }
 
 @media screen and (min-width: 1440px) {
@@ -85,5 +92,8 @@ body {
     body {
         background: rgb(0, 0, 0) url('../assets/images/ghostlight_bg.png') repeat -50% -10% fixed;
         background-size: 30%;
+    }
+    .container {
+        padding: 0 12rem;
     }
 }

@@ -123,54 +123,25 @@ export const getPageLinks = () => {
  * 
  * @return none
  */
-export const loadPageContent = () => {
+export const loadPageContent = async () => {
     const basename = window.location.pathname;
-    const direction = sessionStorage.getItem('direction');
+    const direction = sessionStorage.getItem('direction') ?? 'group-forward';
     const pageEl = document.querySelector('body > section');
     const pageContentEl = document.querySelector('body > section > main');
-    if (direction === 'group-back' || direction === 'group-forward') {
-        pageEl.classList.remove('hide');
-    } else {
+    
+    if (direction == 'back' && direction == 'forward') {
         pageEl.classList.add('hide');
     }
-    
+
     switch(basename) {
         case '/':
-            const homePage = pagesData.find(page => page.slug === 'home');
-            const home = document.querySelector('.home');
-            const homeContent = document.querySelector('.home-content');
-            const contentEl = document.querySelector('main.home-content > .container');
+        case '/index.html':
+            await loadHomePage(direction, pageEl, pageContentEl);
+            break;
 
-            switch(direction) {
-                case 'back':
-                    pageEl.classList.add('left');
-                    break;
-
-                case 'forward':
-                    pageEl.classList.add('right');
-                    break;
-
-                case 'group-back':
-                    pageContentEl.classList.add('left');
-                    break;
-
-                case 'group-forward':
-                    pageContentEl.classList.add('right');
-                    break;
-
-                default:
-                    pageContentEl.classList.add('right');
-            }
-
-            const titleEl = document.createElement('h1');
-            titleEl.innerText = homePage.title;
-
-            const mainContentEl = document.createElement('section');
-            mainContentEl.classList.add('main-content');
-            mainContentEl.innerHTML = homePage.content;
-
-            contentEl.append(titleEl);
-            contentEl.append(mainContentEl);
+        case '/company/':
+        case '/company/index.html':
+            await loadAboutPage(direction, pageEl, pageContentEl);
             break;
 
         default:
@@ -183,18 +154,13 @@ export const loadPageContent = () => {
         el.innerText = date.getFullYear();
     })
 
-    
-
-    if (pageEl.classList.contains('hide')) {
-        pageEl.classList.remove('hide');
-    }
-
     if (pageContentEl.classList.contains('hide')) {
         pageContentEl.classList.remove('hide');
 
     }
     
     setTimeout(() => {
+        
         if (pageEl.classList.contains('right')) {
             pageEl.classList.remove('right');
         }
@@ -211,7 +177,7 @@ export const loadPageContent = () => {
             pageContentEl.classList.remove('left');
     
         }
-    }, 250)
+    }, 500)
     
 }
 
@@ -225,6 +191,7 @@ export const loadWebsiteData = () => {
     pagesData = JSON.parse(sessionStorage.getItem('pages'));
     teamData = JSON.parse(sessionStorage.getItem('team'));
     workshopsData = JSON.parse(sessionStorage.getItem('workshops'));
+    sessionStorage.getItem('direction') ?? sessionStorage.setItem('direction', 'group-forward');;
 
     if ( !pagesData ) {
         sessionStorage.setItem('pages', JSON.stringify(pages));
@@ -250,4 +217,86 @@ export const preloadImages = ( images = [] ) => {
         imageEl.src = `${window.location.origin}/assets/images/${image}`;
     });
     
+}
+
+const loadHomePage = async (direction, pageEl, pageContentEl) => {
+    const pagesData = JSON.parse(sessionStorage.getItem('pages'));
+    const homePage = pagesData.find(page => page.slug === 'home');
+    const contentEl = document.querySelector('main.home-content > .container');
+
+    switch(direction) {
+        case 'back':
+            pageEl.classList.add('left');
+            break;
+
+        case 'forward':
+            pageEl.classList.add('right');
+            break;
+
+        case 'group-back':
+            pageContentEl.classList.add('left');
+            break;
+
+        case 'group-forward':
+            pageContentEl.classList.add('right');
+            break;
+
+        default:
+            pageContentEl.classList.add('right');
+    }
+
+    const titleEl = document.createElement('h1');
+    titleEl.innerText = homePage.title;
+
+    const mainContentEl = document.createElement('section');
+    mainContentEl.classList.add('main-content');
+    mainContentEl.innerHTML = homePage.content;
+
+    contentEl.append(titleEl);
+    contentEl.append(mainContentEl);
+
+    if (pageEl.classList.contains('hide')) {
+        pageEl.classList.remove('hide');
+    }
+}
+
+const loadAboutPage = async (direction, pageEl, pageContentEl) => {
+    const pagesData = JSON.parse(sessionStorage.getItem('pages'));
+    const aboutPage = pagesData.find(page => page.slug === 'about');
+    const contentEl = document.querySelector('main.about-content > .container');
+
+    switch(direction) {
+        case 'back':
+            pageEl.classList.add('left');
+            break;
+
+        case 'forward':
+            pageEl.classList.add('right');
+            break;
+
+        case 'group-back':
+            pageContentEl.classList.add('left');
+            break;
+
+        case 'group-forward':
+            pageContentEl.classList.add('right');
+            break;
+
+        default:
+            pageContentEl.classList.add('right');
+    }
+
+    const titleEl = document.createElement('h1');
+    titleEl.innerText = aboutPage.title;
+
+    const mainContentEl = document.createElement('section');
+    mainContentEl.classList.add('main-content');
+    mainContentEl.innerHTML = aboutPage.content;
+
+    contentEl.append(titleEl);
+    contentEl.append(mainContentEl);
+
+    if (pageEl.classList.contains('hide')) {
+        pageEl.classList.remove('hide');
+    }
 }
