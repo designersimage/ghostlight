@@ -37,7 +37,8 @@ const mapMainURL      = './';
 
 const jsMainSRC               = './src/js/';
 const jsMain                  = 'main.js';
-const jsMainFiles             = [ jsMain ];
+const jsPreload               = 'preload.js';
+const jsFiles                 = [ jsMain, jsPreload ];
 const jsMainURL               = './assets/';
 
 const imgSRC       = './src/images/*.{png,jpg}';
@@ -85,7 +86,7 @@ function css(done) {
 };
 
 function js(done) {
-	jsMainFiles.map( function( entry ) {
+	jsFiles.map( function( entry ) {
 		return browserify({
 			entries: [jsMainSRC + entry]
 		})

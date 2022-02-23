@@ -5,10 +5,9 @@
  *  Project: Ghost Light Perfomance, Inc.
  *  Author: Jonathan Wheeler
 */
-import { pages, team, workshops } from '../../data/data';
-import { backward, forward, groupBackward, groupForward } from "./nav-directs";
 
-let pagesData, teamData, workshopsData;
+import { pause } from "browser-sync";
+
 
 /**
  * A function for getting all links on page to navigation direction.
@@ -125,12 +124,12 @@ export const getPageLinks = () => {
  */
 export const loadPageContent = async () => {
     const basename = window.location.pathname;
-    const direction = sessionStorage.getItem('direction') ?? 'group-forward';
     const pageEl = document.querySelector('body > section');
     const pageContentEl = document.querySelector('body > section > main');
     
     if (direction == 'back' && direction == 'forward') {
         pageEl.classList.add('hide');
+        return;
     }
 
     switch(basename) {
@@ -181,43 +180,7 @@ export const loadPageContent = async () => {
     
 }
 
-/**
- * A function for loading the content into session storage.
- * 
- * @return none
- */
-export const loadWebsiteData = () => {
-    // Check if data is stored in session
-    pagesData = JSON.parse(sessionStorage.getItem('pages'));
-    teamData = JSON.parse(sessionStorage.getItem('team'));
-    workshopsData = JSON.parse(sessionStorage.getItem('workshops'));
-    sessionStorage.getItem('direction') ?? sessionStorage.setItem('direction', 'group-forward');;
 
-    if ( !pagesData ) {
-        sessionStorage.setItem('pages', JSON.stringify(pages));
-        pagesData = JSON.parse(sessionStorage.getItem('pages'));
-    }
-
-    if ( !teamData ) {
-        sessionStorage.setItem('team', JSON.stringify(team));
-        teamData = JSON.parse(sessionStorage.getItem('team'));
-    }
-
-    if ( !workshopsData ) {
-        sessionStorage.setItem('workshops', JSON.stringify(workshops));
-        workshopsData = JSON.parse(sessionStorage.getItem('workshops'));
-    }
-
-}
-
-export const preloadImages = ( images = [] ) => {
-
-    images.forEach(image => {
-        const imageEl = new Image();
-        imageEl.src = `${window.location.origin}/assets/images/${image}`;
-    });
-    
-}
 
 const loadHomePage = async (direction, pageEl, pageContentEl) => {
     const pagesData = JSON.parse(sessionStorage.getItem('pages'));
