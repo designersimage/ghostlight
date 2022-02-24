@@ -23,7 +23,7 @@ if ( !imagesLoaded ) {
 
 
 /* Website Data Preload */
-let pagesData, teamData, workshopsData;
+export let pagesData, teamData, workshopsData;
 
 
 /**

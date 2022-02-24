@@ -5,6 +5,7 @@
  *  Project: Ghost Light Perfomance, Inc.
  *  Author: Jonathan Wheeler
 */
+import { pagesData, teamData, workshopsData  } from "../preload";
 import { pageEl, pageContentEl, direction } from "../main";
 
 /**
@@ -129,7 +130,39 @@ export const loadPageContent = async () => {
 
         case '/company/':
         case '/company/index.html':
-            await loadAboutPage();
+            await loadAboutPage('about');
+            break;
+
+        case '/company/bio.html':
+            await loadAboutPage('bio');
+            break;        
+
+        case '/company/contact.html':
+            await loadAboutPage('contact');
+            break;
+
+        case '/company/industry_services.html':
+            await loadAboutPage('industry-services');
+            break;
+    
+        case '/company/offers.html':
+            await loadAboutPage('offers');
+            break;
+
+        case '/company/industry_services.html':
+            await loadAboutPage('industry-services');
+            break;
+    
+        case '/company/private_training.html':
+            await loadAboutPage('private-training');
+            break;
+
+        case '/company/showcases.html':
+            await loadAboutPage('showcases');
+            break;
+
+        case '/company/team.html':
+            await loadAboutPage('team');
             break;
 
         default:
@@ -174,13 +207,7 @@ export const loadPageContent = async () => {
     
 }
 
-
-
-const loadHomePage = async () => {
-    const pagesData = JSON.parse(sessionStorage.getItem('pages'));
-    const homePage = pagesData.find(page => page.slug === 'home');
-    const contentEl = document.querySelector('main.home-content > .container');
-
+const addPageDirection = () => {
     switch(direction) {
         case 'back':
             pageEl.classList.add('left');
@@ -201,6 +228,14 @@ const loadHomePage = async () => {
         default:
             pageContentEl.classList.add('right');
     }
+}
+
+
+const loadHomePage = async () => {
+    const homePage = pagesData.find(page => page.slug === 'home');
+    const contentEl = document.querySelector('main.home-content > .container');
+
+    addPageDirection();
 
     const titleEl = document.createElement('h1');
     titleEl.innerText = homePage.title;
@@ -213,31 +248,11 @@ const loadHomePage = async () => {
     contentEl.append(mainContentEl);
 }
 
-const loadAboutPage = async () => {
-    const pagesData = JSON.parse(sessionStorage.getItem('pages'));
-    const aboutPage = pagesData.find(page => page.slug === 'about');
+const loadAboutPage = async (slug) => {
+    const aboutPage = pagesData.find(page => page.slug === slug);
     const contentEl = document.querySelector('main.about-content > .container');
 
-    switch(direction) {
-        case 'back':
-            pageEl.classList.add('left');
-            break;
-
-        case 'forward':
-            pageEl.classList.add('right');
-            break;
-
-        case 'group-back':
-            pageContentEl.classList.add('left');
-            break;
-
-        case 'group-forward':
-            pageContentEl.classList.add('right');
-            break;
-
-        default:
-            pageContentEl.classList.add('right');
-    }
+    addPageDirection();
 
     const titleEl = document.createElement('h1');
     titleEl.innerText = aboutPage.title;

@@ -41,7 +41,168 @@ export const pages = [
                     and discipline, fun and instruction, emotional safety and artistic daring, an environment that reflects the nature of the 
                     entertainment industry itself. We hope to develop actors and models who not only shine when the show is in full swing, but also 
                     keep their light ablaze when preparing quietly on their own for that next big performance.</p>
-                <p>We are Ghost Light Performance, Inc. Let us help to guide you through the dark.</p>`
+                <p>We are Ghost Light Performance, Inc. Let us help to guide you through the dark.</p>
+                <p class="footer-info">Ghost Light Performance Inc. &copy; <span class="current-year"></span></p>`
+    },
+    {
+        id: 3,
+        slug: 'contact',
+        title: `Contact Us`,
+        content: `<nav class="page-links">
+                    <a href="team.html" data-nav="group-forward" title="Our Team">Our Team</a>
+                    <a href="private_training.html" data-nav="group-forward" title="Private Training">Private Training</a>
+                    <a href="showcases.html" data-nav="group-forward" title="Showcases">Showcases</a>
+                    <a href="offers.html" data-nav="group-forward" title="Special Offers">Special Offers</a>
+                    <a href="industry_services.html" data-nav="group-forward" title="Industry Services">Industry Services</a>
+                    <a href="../community_partners/" data-nav="forward" title="Community Partners">Community Partners</a>
+                </nav>
+                <form method="post" class="contact-form" action="./contact.html">
+                    <div class="left">
+                        <label for="contact-name">Full Name</label>
+                        <input type="text" name="contact-name" id="contact-name" required>
+                        <label for="contact-phone">Phone Number</label>
+                        <input type="tel" name="contact-phone" id="contact-phone">
+                        <label for="contact-email">Email Address</label>
+                        <input type="email" name="contact-email" id="contact-email" required>
+                    </div>
+                    <div class="right">
+                        <label for="contact-interest">I'm interested in...</label>
+                        <select name="contact-interest" id="contact-interest">
+                            <option value="audition">Auditioning</option>
+                            <option value="presentation">Scheduling a Presentation</option>
+                            <option value="partner">Becoming a Community Partner</option>
+                            <option value="workshop">2-Day Intensive Workshops</option>
+                            <option value="private">Receiving Private Training</option>
+                            <option value="scholarship">Applying for a Scholarship</option>
+                            <option value="rent">Renting Rehearsal Space</option>
+                            <option value="casting">Casting Performers</option>
+                            <option value="general" selected>General Question/Comment</option>
+                        </select>
+                        <label for="contact-comment">Question/Comment</label>
+                        <textarea name="contact-comment" id="contact-comment" rows="6"></textarea>
+                        <button type="submit" name="contact-submit" id="contact-submit">Submit</button>
+                    </div>
+                </form>
+                <p class="footer-info">Ghost Light Performance Inc. &copy; <span class="current-year"></span></p>`
+    },
+    {
+        id: 4,
+        slug: 'team',
+        title: `Our Team`,
+        content: `<nav class="page-links">
+                    <a href="./" data-nav="group-back" class="company__back-link" title="Go Back">« Back</a>
+                </nav>
+                <p><strong>Mission Statement:</strong> To enrich, educate, and prepare performers to further their artistic endeavors and careers by offering
+                training, management, and the tools to succeed in the professional industry.</p>
+                <div id="team"></div>
+                <p class="footer-info">Ghost Light Performance Inc. &copy; <span class="current-year"></span></p>`
+    },
+    {
+        id: 5,
+        slug: 'bio',
+        title: `[bio_name]`,
+        content: `<div id="page-links">
+                    <a href="team.html" data-nav="group-back" class="company__back-link" title="Back to Team">« Back to Team</a>
+                </div>
+                <div id="bio-content"></div>
+                <p class="footer-info">Ghost Light Performance Inc. &copy; <span class="current-year"></span></p>`
+    },
+    {
+        id: 6,
+        slug: 'private-training',
+        title: `Private Training`,
+        content: `<nav class="page-links">
+                    <a href="./" data-nav="group-back" class="company__back-link" title="Go Back">« Back</a>
+                </nav>
+                <p>For the performer desiring additional instruction, Ghost Light offers the opportunity to meet 
+                    with an experienced acting or modeling coach on an individual basis. Whether the performer is 
+                    looking to develop an aspect of his or her craft or seeking to work on a particular piece, our 
+                    coaches are available to give the individually catered Private Coaching each performer requires.
+                </p>
+                <p>Situations in which Private Coaching may be beneficial:</p>
+                <ul>
+                    <li>Preparing for an audition.</li>
+                    <li>Filming a video audition.</li>
+                    <li>Working on a specific set of skills you wish to strengthen (posture in runway walk, creating a dynamic character, etc.)</li>
+                    <li>Getting an outside eye on new material you may be working on.</li>
+                </ul>
+                <p>Any material currently in use for a class or performance in which you are working with a particular 
+                    instructor or director is not acceptable for use in Private Coaching. Ghost Light respects our local 
+                    professionals and will politely decline to work on any material that is currently under another's direction.
+                </p>
+                <p>Interested in private training? <a href="contact.html?ref=private-training" data-nav="group-forward" title="Interested in Private Training">Click Here</a></p>
+                <p class="footer-info">Ghost Light Performance Inc. &copy; <span class="current-year"></span></p>`
+    },
+    {
+        id: 7,
+        slug: 'showcases',
+        title: `Showcases`,
+        content: `<nav class="page-links">
+                    <a href="./" data-nav="group-back" class="company__back-link" title="Go Back">« Back</a>
+                </nav>
+                <p>Ghost Light Performance Showcases offer a chance for our workshop attendees to perform in front of an audience of friends, 
+                    family, and fellow performers, as well as local professionals and our Ghost Light Community Partners. Providing the 
+                    opportunity to not only demonstrate one's acquired skills but to also network with others in the performing arts community, 
+                    Ghost Light Performance Showcases are a valuable asset for actors and models of all skill levels.
+                </p>
+                <p>Showcases coincide with the schedules of our workshop series and are held quarterly. Our next Performance Showcase will take place December <span class="current-year"></span>.</p>
+                <p class="footer-info">Ghost Light Performance Inc. &copy; <span class="current-year"></span></p>`
+    },
+    {
+        id: 8,
+        slug: 'offers',
+        title: `Special Offers`,
+        content: `<nav class="page-links">
+                    <a href="./" data-nav="group-back" class="company__back-link" title="Go Back">« Back</a>
+                </nav>
+                <p>Ghost Light Performance gladly offers tuition discounts and price breaks under certain circumstances. Our Current Special Offers include:</p>
+                <ul>
+                    <li>10% discount for current college/university students</li>
+                    <li>10% discount for active military and verteran performers</li>
+                    <li>$100 off of each workshop series purchased in a bundle of two or more</li>
+                </ul>
+                <p>Payment plans as well as limited Full and Partial Scholarship opportunities are also available.</p>
+                <p>Interested in applying for a scholarship? <a href="contact.html?ref=scholarship" data-nav="group-forward" title="Apply for a Scholarship">Click Here</a></p>
+                <p class="footer-info">Ghost Light Performance Inc. &copy; <span class="current-year"></span></p>`
+    },
+    {
+        id: 9,
+        slug: 'industry-services',
+        title: `Industry Services`,
+        content: `<nav class="page-links">
+                    <a href="./" data-nav="group-back" class="company__back-link" title="Go Back">« Back</a>
+                </nav>
+                <p>At Ghost Light Performance, Inc., we believe that having the right tools is just as important as having the right 
+                    training when it comes to building a successful acting or modeling career. For this reason, we emphasize the inclusion 
+                    of Headshots and Portfolio Pictures, Video Reels and Comp Cards, Resume Creation and Interview Training in our workshop 
+                    series. Each series will help to contribute not only the performer's artistic abilities but also to his or her business 
+                    savvy and accumulated evidence of work. These tools are vital when auditioning, networking, and seeking representation. 
+                    We strive to prepare our performers to shine both on stage and on the business end of the industry. Please see the 
+                    individual workshop series for which tools each includes.
+                </p>
+                <ul>
+                    <li><strong>Headshots:</strong> A headshot is an 8"x10" picture of an actor or model's face, particularly one expressing 
+                        character and personality. Headshots should be dynamic and engaging to the professionals to whom they will be submitted 
+                        and capable of grabbing the attention of an agent, manager, or casting director. Typically these pictures are from 
+                        shoulders up only, as the name implies.
+                    </li>
+                    <li><strong>Portfolio:</strong> A portfolio is a collection of images displaying the very best of a model's print work. 
+                        It should contain between six and twenty pictures in a variety of styles and poses demonstrating the model's personality, 
+                        versatility, and strengths. The sizes of a portfolio should be between 8"x10" and 9"x14", depending on the specific market.
+                    </li>
+                    <li><strong>Reel:</strong> An actor's reel is a video, no more than three minutes in length, that shows his or her experience 
+                        in film. It includes one to five scenes of varied lengths and acting ranges, and sometimes includes a montage of thirty 
+                        seconds or less. It is designed to showcase an actor's talent as well as encourage an agent, manager, or director to sign, 
+                        cast, or hire the performer.
+                    </li>
+                    <li><strong>Comp Card:</strong> Short for "composite card," a comp card is an 8.5"x5.5" presentation of the newest and best 
+                        images an actor or model has available, typically including a large headshot on one side and three to five smaller images 
+                        on the reverse. The comp card is valuable in showing a performer's range by presenting an agent, manager, or casting 
+                        director with a variety of looks and styles.
+                    </li>
+                </ul>
+                <p>Interested in our industry services? <a href="contact.html?ref=general" data-nav="group-forward" title="Interested in Industry Services">Click Here</a></p>
+                <p class="footer-info">Ghost Light Performance Inc. &copy; <span class="current-year"></span></p>`
     }
 ]
 
