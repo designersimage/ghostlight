@@ -29,7 +29,7 @@ import browserSync           from 'browser-sync';
 browserSync.create();
 
 // Project related variables
-const projectURL                = 'http://ghostlight.designersimage.local/';
+const projectURL              = 'http://ghostlight.designersimage.local/';
 
 const styleMainSRC    = './src/scss/main.scss';
 const styleMainURL    = './assets/';
@@ -44,6 +44,9 @@ const jsMainURL               = './assets/';
 const imgSRC       = './src/images/*.{png,jpg}';
 const imgURL       = './assets/images/';
 
+const imgHeadshotSRC       = './src/images/headshots/*.{png,jpg}';
+const imgHeadshotURL       = './assets/images/headshots/';
+
 // const fontsSRC     = './src/fonts/**/*';
 // const fontsURL     = './dist/fonts/';
 
@@ -51,6 +54,7 @@ const styleMainWatch   = './src/**/**/*.scss';
 const jsMainWatch      = './src/**/**/*.js';
 
 const imgWatch     = './src/images/*.{png,jpg}';
+const imgHeadshotWatch     = './src/images/headshots/*.{png,jpg}';
 // const fontsWatch   = './src/fonts/**/*.*';
 
 const htmlWatch    = './**/*.html';
@@ -117,6 +121,9 @@ function triggerPlumber( src_file, dest_file ) {
 function images() {
 	return triggerPlumber( imgSRC, imgURL );
 };
+function imagesHeadshot() {
+	return triggerPlumber( imgHeadshotSRC, imgHeadshotURL );
+};
 
 // function fonts() {
 // 	return triggerPlumber( fontsSRC, fontsURL );
@@ -126,6 +133,7 @@ function watch_files() {
 	watch(styleMainWatch, series(css, reload));
 	watch(jsMainWatch, series(js, reload));
 	watch(imgWatch, series(images, reload));
+    watch(imgHeadshotWatch, series(imagesHeadshot, reload));
 	// watch(fontsWatch, series(fonts, reload));
 	watch(htmlWatch, reload);
 	src(jsMainURL + 'main.min.js');
@@ -138,7 +146,8 @@ function watch_html() {
 task("css", css);
 task("js", js);
 task("images", images);
+task("imagesHeadshot", imagesHeadshot);
 // task("fonts", fonts);
 task("live", parallel(browser_sync, watch_html));
-task("default", parallel(css, js, images/*, fonts*/));
+task("default", parallel(css, js, images, imagesHeadshot/*, fonts*/));
 task("watch", parallel(browser_sync, watch_files));

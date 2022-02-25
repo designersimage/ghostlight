@@ -263,4 +263,31 @@ const loadAboutPage = async (slug) => {
 
     contentEl.append(titleEl);
     contentEl.append(mainContentEl);
+
+    if (slug === 'team') {
+        const teamEl = document.querySelector('#team');
+        teamData.forEach(member => {
+            const memberLink = document.createElement('a');
+            memberLink.setAttribute('data-nav', 'group-forward');
+            memberLink.setAttribute('href', `bio.html?id=${member.id}`)
+            memberLink.classList.add('member');
+
+            const memberImg = document.createElement('img');
+            memberImg.setAttribute('src', `../assets/images/headshots/${member.headshot}`);
+            memberImg.setAttribute('alt', member.name);
+
+            const memberName = document.createElement('span');
+            memberName.classList.add('member-name');
+            memberName.innerText = member.name;
+
+            const memberTitle = document.createElement('span');
+            memberTitle.classList.add('member-title');
+            memberTitle.innerText = member.title;
+
+            memberLink.append(memberImg);
+            memberLink.append(memberName);
+            memberLink.append(memberTitle);
+            teamEl.append(memberLink);
+        });
+    }
 }
