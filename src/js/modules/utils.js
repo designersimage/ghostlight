@@ -120,7 +120,10 @@ export const getPageLinks = () => {
  * @return none
  */
 export const loadPageContent = async () => {
-    const basename = window.location.pathname;
+    let basename = window.location.pathname;
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    basename = basename.split('?')[0];
 
     switch(basename) {
         case '/':
@@ -134,7 +137,7 @@ export const loadPageContent = async () => {
             break;
 
         case '/company/bio.html':
-            await loadAboutPage('bio');
+            await loadAboutPage('bio', parseInt(urlParams.get('id')));
             break;        
 
         case '/company/contact.html':
@@ -248,7 +251,7 @@ const loadHomePage = async () => {
     contentEl.append(mainContentEl);
 }
 
-const loadAboutPage = async (slug) => {
+const loadAboutPage = async (slug, id = null) => {
     const aboutPage = pagesData.find(page => page.slug === slug);
     const contentEl = document.querySelector('main.about-content > .container');
 
@@ -289,5 +292,13 @@ const loadAboutPage = async (slug) => {
             memberLink.append(memberTitle);
             teamEl.append(memberLink);
         });
+    }
+
+    if (slug === 'bio' && id) {
+        const bioEl = document.querySelector('#bio-content');
+        const bio = teamData.find(member => member.id === id);
+        
+        const nameEl = document.querySelector('.about-content > .container > h1');
+        nameEl.innerText = bio.name;
     }
 }

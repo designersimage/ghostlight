@@ -100,7 +100,7 @@ export const pages = [
     {
         id: 5,
         slug: 'bio',
-        title: `[bio_name]`,
+        title: ``,
         content: `<div id="page-links">
                     <a href="team.html" data-nav="group-back" class="company__back-link" title="Back to Team">« Back to Team</a>
                 </div>

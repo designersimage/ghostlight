@@ -112,7 +112,7 @@
                 width: 100%;
 
                 img {
-                    border: solid 1px $gl__grey;
+                    border: solid 1px $gl__grey-dark;
                     border-radius: .5rem;
                     height: 20rem;
                     margin: 0;
@@ -125,10 +125,26 @@
 
                 .member-name {
                     font-size: 1.8rem;
+                    font-weight: 700;
                 }
                 .member-title {
+                    color: $gl__grey;
                     font-size: 1.1rem;
+                    font-weight: 600;
                     text-transform: uppercase;
+                }
+
+                &:active, &:hover {
+                    img {
+                        border-color: $gl__light;
+                    }
+
+                    .member-name {
+                        color: $gl__light;
+                    }
+                    .member-title {
+                        color: $gl__light;
+                    }
                 }
 
             }
