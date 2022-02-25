@@ -26,7 +26,7 @@
 
         h1 {
             color: white;
-            font-size: 2rem;
+            font-size: 2.4rem;
             font-weight: 400;
             margin: 0 0 1rem;
             text-shadow: 1px 1px 1px black;
@@ -36,13 +36,14 @@
             align-items: center;
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: flex-start;
             margin: 0 0 2rem;
 
             a {
                 color: $gl__light;
+                font-size: 1.1rem;
                 font-weight: 600;
-                margin: .5rem .7rem;
+                margin: .5rem 1.5rem .5rem 0;
                 text-decoration: none;
                 text-shadow: 1px 1px 1px black;
                 text-transform: uppercase;
@@ -58,8 +59,18 @@
         p {
             color: $gl__white;
             font-size: 1.2rem;
+            letter-spacing: .05rem;
             margin: 0 0 1.5rem;
             text-shadow: 1px 1px 1px black;
+        }
+
+        p.footer-info {
+            color: $gl__grey;
+            font-size: 1.2rem;
+            padding-bottom: 2rem;
+            text-align: left;
+            text-decoration: none;
+            text-shadow: 1px 1px 2px black, 0 0 0.2em black;
         }
 
         &.hide {
