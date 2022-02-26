@@ -341,15 +341,202 @@
 
 @media screen and (min-width: 540px) {
     .company {
-        background: url('../assets/images/company_bg.jpg') repeat  right 50% top fixed;
+        background: url('../assets/images/company_bg.jpg') repeat  right 40% top fixed;
         background-size: cover;
 
-        
+        .about-content {
+            h1 {
+                font-size: 3.2rem;
+                margin: 5rem 0 2rem;
+            }
+
+            nav.page-links {
+                margin: 0 0 2rem;
+    
+                a {
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    margin: 1rem 2rem 1rem 0;
+                }
+            }
+    
+            p {
+                font-size: 1.4rem;
+                margin: 0 0 1.5rem;
+            }
+    
+            ul {
+                font-size: 1.4rem;
+    
+                li {
+                    margin-bottom: 1rem;
+                }
+            }
+
+            a {
+                font-size: 1.4rem;
+                margin: .5rem 1.5rem .5rem 0;
+            }
+
+            #team {
+                justify-content: flex-start;
+    
+                a {
+                    flex-direction: column;
+                    margin: 2rem;
+                    width: unset;
+    
+                    img {
+                        border: solid 1px $gl__grey-dark;
+                        border-radius: .5rem;
+                        height: 20rem;
+                        margin: 0;
+                        object-fit: cover;
+                        object-position: center top;
+                        overflow: hidden;
+                        padding: 0;
+                        width: 20rem;
+                    }
+    
+                    .member-name {
+                        font-size: 1.8rem;
+                        font-weight: 700;
+                        margin-top: .5rem;
+                    }
+                    .member-title {
+                        color: $gl__grey;
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+    
+            #bio-content {
+                align-items: flex-start;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin: 2rem 0;
+    
+                img {
+                    border: solid 1px $gl__grey-dark;
+                    margin-bottom: 2rem;
+                    width: 30rem;
+                }
+    
+                p {
+                    font-size: 1.3rem;
+                    letter-spacing: .05rem;
+                    margin: 0 0 1.5rem;
+                }
+            }
+    
+            p.footer-info {
+                font-size: 1.3rem;
+                padding-bottom: 2rem;
+            }
+        }
     }
 }
 
 @media screen and (min-width: 768px) {
+    .company {
+        
+        .about-content {
+            h1 {
+                font-size: 3.2rem;
+                margin: 5rem 0 2rem;
+            }
+
+            nav.page-links {
+                margin: 0 0 2rem;
     
+                a {
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    margin: 1rem 1.7rem 1rem 0;
+                }
+            }
+    
+            p {
+                font-size: 1.6rem;
+                margin: 0 0 2rem;
+            }
+    
+            ul {
+                font-size: 1.6rem;
+    
+                li {
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+            a {
+                font-size: 1.6rem;
+                margin: .5rem 1.5rem .5rem 0;
+            }
+
+            #team {
+                justify-content: flex-start;
+    
+                a {
+                    flex-direction: column;
+                    margin: 2rem;
+                    width: unset;
+    
+                    img {
+                        border: solid 1px $gl__grey-dark;
+                        border-radius: .5rem;
+                        height: 18rem;
+                        margin: 0;
+                        object-fit: cover;
+                        object-position: center top;
+                        overflow: hidden;
+                        padding: 0;
+                        width: 18rem;
+                    }
+    
+                    .member-name {
+                        font-size: 1.8rem;
+                        font-weight: 700;
+                        margin-top: .5rem;
+                    }
+                    .member-title {
+                        color: $gl__grey;
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+    
+            #bio-content {
+                align-items: flex-start;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin: 2rem 0;
+    
+                img {
+                    border: solid 1px $gl__grey-dark;
+                    margin-bottom: 2rem;
+                    width: 30rem;
+                }
+    
+                p {
+                    font-size: 1.3rem;
+                    letter-spacing: .05rem;
+                    margin: 0 0 1.5rem;
+                }
+            }
+    
+            p.footer-info {
+                font-size: 1.3rem;
+                padding-bottom: 2rem;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 820px) {
