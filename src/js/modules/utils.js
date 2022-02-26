@@ -300,5 +300,20 @@ const loadAboutPage = async (slug, id = null) => {
         
         const nameEl = document.querySelector('.about-content > .container > h1');
         nameEl.innerText = bio.name;
+
+        const imgEl = document.createElement('img');
+        imgEl.setAttribute('src', `../assets/images/headshots/${bio.headshot}`);
+        imgEl.setAttribute('alt', bio.name);
+
+        bioEl.append(imgEl);
+
+        const contentParagraphs = bio.bio.split('\n');
+        console.log(contentParagraphs)
+        contentParagraphs.forEach(paragraph => {
+            const contentEl = document.createElement('p');
+            contentEl.innerHTML = paragraph;
+            bioEl.append(contentEl);
+        })
+		
     }
 }

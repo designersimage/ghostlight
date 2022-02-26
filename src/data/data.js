@@ -90,7 +90,7 @@ export const pages = [
         slug: 'team',
         title: `Our Team`,
         content: `<nav class="page-links">
-                    <a href="./" data-nav="group-back" class="company__back-link" title="Go Back">« Back</a>
+                    <a href="./" data-nav="group-back" class="company__back-link" title="Go Back">« Back to Company</a>
                 </nav>
                 <p><strong>Mission Statement:</strong> To enrich, educate, and prepare performers to further their artistic endeavors and careers by offering
                 training, management, and the tools to succeed in the professional industry.</p>
@@ -112,7 +112,7 @@ export const pages = [
         slug: 'private-training',
         title: `Private Training`,
         content: `<nav class="page-links">
-                    <a href="./" data-nav="group-back" class="company__back-link" title="Go Back">« Back</a>
+                    <a href="./" data-nav="group-back" class="company__back-link" title="Go Back">« Back to Company</a>
                 </nav>
                 <p>For the performer desiring additional instruction, Ghost Light offers the opportunity to meet 
                     with an experienced acting or modeling coach on an individual basis. Whether the performer is 
@@ -138,7 +138,7 @@ export const pages = [
         slug: 'showcases',
         title: `Showcases`,
         content: `<nav class="page-links">
-                    <a href="./" data-nav="group-back" class="company__back-link" title="Go Back">« Back</a>
+                    <a href="./" data-nav="group-back" class="company__back-link" title="Go Back">« Back to Company</a>
                 </nav>
                 <p>Ghost Light Performance Showcases offer a chance for our workshop attendees to perform in front of an audience of friends, 
                     family, and fellow performers, as well as local professionals and our Ghost Light Community Partners. Providing the 
@@ -153,7 +153,7 @@ export const pages = [
         slug: 'offers',
         title: `Special Offers`,
         content: `<nav class="page-links">
-                    <a href="./" data-nav="group-back" class="company__back-link" title="Go Back">« Back</a>
+                    <a href="./" data-nav="group-back" class="company__back-link" title="Go Back">« Back to Company</a>
                 </nav>
                 <p>Ghost Light Performance gladly offers tuition discounts and price breaks under certain circumstances. Our Current Special Offers include:</p>
                 <ul>
@@ -170,7 +170,7 @@ export const pages = [
         slug: 'industry-services',
         title: `Industry Services`,
         content: `<nav class="page-links">
-                    <a href="./" data-nav="group-back" class="company__back-link" title="Go Back">« Back</a>
+                    <a href="./" data-nav="group-back" class="company__back-link" title="Go Back">« Back to Company</a>
                 </nav>
                 <p>At Ghost Light Performance, Inc., we believe that having the right tools is just as important as having the right 
                     training when it comes to building a successful acting or modeling career. For this reason, we emphasize the inclusion 
@@ -212,27 +212,21 @@ export const team = [
         name: 'Don Draper',
         title: 'Marketing & Recruiting',
         headshot: 'headshot_draper.jpg',
-        bio: `<p>Donald Francis "Don" Draper is a founding partner and the Creative Director at Sterling Cooper Draper Pryce Advertising Agency in Manhattan, NY ("Shut the Door. Have a Seat"). Prior to that position, he was the Director of the Creative Department at the Sterling Cooper Advertising Agency ("Smoke Gets in Your Eyes"). He is regarded among his colleagues as the best to ever pitch copy.</p>
-        <p>Don Draper has an intuitive understanding of the consumer's mind, making him a brilliant ad man and the award-winning star of Sterling Cooper. A few of his clients include Lucky Strike, Playtex, Mohawk Airlines, American Airlines, and Samsonite luggage.</p>`
+        bio: `Donald Francis "Don" Draper is a founding partner and the Creative Director at Sterling Cooper Draper Pryce Advertising Agency in Manhattan, NY ("Shut the Door. Have a Seat"). Prior to that position, he was the Director of the Creative Department at the Sterling Cooper Advertising Agency ("Smoke Gets in Your Eyes"). He is regarded among his colleagues as the best to ever pitch copy.\nDon Draper has an intuitive understanding of the consumer's mind, making him a brilliant ad man and the award-winning star of Sterling Cooper. A few of his clients include Lucky Strike, Playtex, Mohawk Airlines, American Airlines, and Samsonite luggage.`
     },
     {
         id: 2,
         name: 'Stanley Tucci',
         title: 'Program Director',
         headshot: 'headshot_tucci.jpg',
-        bio: `<p>Stanley Tucci took an interest in acting while in high school, and went on to attend the State University of New York's Conservatory of Theater Arts in Purchase. He began his professional career on the stage, making his Broadway debut in 1982, and then made his film debut in Prizzi's Honor (1985).</p>
-        <p>In 2009, Tucci received his first Academy Award nomination for his turn as a child murderer in The Lovely Bones (2009). He also received a BAFTA nomination and a Golden Globe nomination for the same role. Other than The Lovely Bones, Tucci has recently had noteworthy supporting turns in a broad range of movies including Lucky Number Slevin (2006), The Devil Wears Prada (2006) and Captain America: The First Avenger (2011). Tucci reached his widest audience yet when he played Caesar Flickerman in box office sensation The Hunger Games (2012).</p>
-        <p>While maintaining an active career in movies, Tucci received major accolades for some work in television. He won an Emmy and a Golden Globe for his role in TV movie Winchell (1998), an Emmy for a guest turn on Monk (2002), and a Golden Globe for his role in HBO movie Conspiracy (2001).</p>
-        <p>Tucci has also had an extensive career behind the camera. His directorial efforts include Big Night (1996), The Impostors (1998), Joe Gould's Secret (2000) and Blind Date (2007), and he did credited work on all of those screenplays with the exception of Joe Gould's Secret (2000).</p>`
+        bio: `Stanley Tucci took an interest in acting while in high school, and went on to attend the State University of New York's Conservatory of Theater Arts in Purchase. He began his professional career on the stage, making his Broadway debut in 1982, and then made his film debut in Prizzi's Honor (1985).\nIn 2009, Tucci received his first Academy Award nomination for his turn as a child murderer in The Lovely Bones (2009). He also received a BAFTA nomination and a Golden Globe nomination for the same role. Other than The Lovely Bones, Tucci has recently had noteworthy supporting turns in a broad range of movies including Lucky Number Slevin (2006), The Devil Wears Prada (2006) and Captain America: The First Avenger (2011). Tucci reached his widest audience yet when he played Caesar Flickerman in box office sensation The Hunger Games (2012).\nWhile maintaining an active career in movies, Tucci received major accolades for some work in television. He won an Emmy and a Golden Globe for his role in TV movie Winchell (1998), an Emmy for a guest turn on Monk (2002), and a Golden Globe for his role in HBO movie Conspiracy (2001).\nTucci has also had an extensive career behind the camera. His directorial efforts include Big Night (1996), The Impostors (1998), Joe Gould's Secret (2000) and Blind Date (2007), and he did credited work on all of those screenplays with the exception of Joe Gould's Secret (2000).`
     },
     {
         id: 3,
         name: 'Julianne Hough',
         title: 'Modeling Coach',
         headshot: 'headshot_hough.jpg',
-        bio: `<p>A true triple-threat, Emmy Award-winner Julianne Hough is known to audiences around the world for her success in the worlds of film, television and music. She became a household name virtually overnight as a two-time professional champion on ABC's top-rated "Dancing With the Stars," before making a seamless transition to award-winning recording artist and making her mark on the world of motion pictures, recognized by the National Association of Theatre Owners as Rising Star of the Year at the 2011 CinemaCon Conventions.</p>
-        <p>In 2013, Julianne starred opposite Josh Duhamel in Nicholas Sparks' "Safe Haven," directed by Lasse Hallstrom, which topped the box-office on its Valentine's Day opening and earned her a Teen Choice Award nomination. Prior to that, she starred opposite Russell Brand and Octavia Spencer in Diablo Cody's "Paradise," marking the Oscar-winning screenwriter's directorial debut. She starred as Sherrie Christian, the female lead in the film adaptation of the international musical sensation, "Rock of Ages," part of a superstar cast including Tom Cruise, Alec Baldwin, Russell Brand and Mary J. Blige. She made headlines by winning the coveted female lead role in Paramount's 2011 remake of the classic movie musical, "Footloose," and critics praised her performance in the film. She made her film debut in the star-studded ensemble of Screen Gems' musical "Burlesque," working alongside an all-star cast, including Cher, Christina Aguilera, Stanley Tucci, Kristen Bell and Cam Gigandet. She appeared recently in the comedy "Dirty Grandpa," opposite Robert De Niro and Zac Efron, and will next star as fitness pioneer Betty Weider in the upcoming feature "Bigger."</p>
-        <p>On January 31, 2016, Julianne fulfilled her lifelong dream of playing the role of Sandy in FOX Television's critical and ratings hit, "Grease Live!," which was nominated for 10 Emmy Awards, winning four awards including Outstanding Special Class Program. As performed by Julianne and the cast, the show-stopping "You're the One That I Want" won the MTV Movie & TV Award for Best Musical Moment, beating such heavy hitters as Ariana Grande and John Legend's "Beauty and the Beast," Justin Timberlake's "Can't Stop the Feeling" and the Ryan Gosling-Emma Stone duet, "City of Stars" from "La La Land."</p>`
+        bio: `A true triple-threat, Emmy Award-winner Julianne Hough is known to audiences around the world for her success in the worlds of film, television and music. She became a household name virtually overnight as a two-time professional champion on ABC's top-rated "Dancing With the Stars," before making a seamless transition to award-winning recording artist and making her mark on the world of motion pictures, recognized by the National Association of Theatre Owners as Rising Star of the Year at the 2011 CinemaCon Conventions.\nIn 2013, Julianne starred opposite Josh Duhamel in Nicholas Sparks' "Safe Haven," directed by Lasse Hallstrom, which topped the box-office on its Valentine's Day opening and earned her a Teen Choice Award nomination. Prior to that, she starred opposite Russell Brand and Octavia Spencer in Diablo Cody's "Paradise," marking the Oscar-winning screenwriter's directorial debut. She starred as Sherrie Christian, the female lead in the film adaptation of the international musical sensation, "Rock of Ages," part of a superstar cast including Tom Cruise, Alec Baldwin, Russell Brand and Mary J. Blige. She made headlines by winning the coveted female lead role in Paramount's 2011 remake of the classic movie musical, "Footloose," and critics praised her performance in the film. She made her film debut in the star-studded ensemble of Screen Gems' musical "Burlesque," working alongside an all-star cast, including Cher, Christina Aguilera, Stanley Tucci, Kristen Bell and Cam Gigandet. She appeared recently in the comedy "Dirty Grandpa," opposite Robert De Niro and Zac Efron, and will next star as fitness pioneer Betty Weider in the upcoming feature "Bigger."\nOn January 31, 2016, Julianne fulfilled her lifelong dream of playing the role of Sandy in FOX Television's critical and ratings hit, "Grease Live!," which was nominated for 10 Emmy Awards, winning four awards including Outstanding Special Class Program. As performed by Julianne and the cast, the show-stopping "You're the One That I Want" won the MTV Movie & TV Award for Best Musical Moment, beating such heavy hitters as Ariana Grande and John Legend's "Beauty and the Beast," Justin Timberlake's "Can't Stop the Feeling" and the Ryan Gosling-Emma Stone duet, "City of Stars" from "La La Land."`
     }
 ]
 

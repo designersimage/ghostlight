@@ -150,6 +150,29 @@
             }
         }
 
+        #bio-content {
+            align-items: flex-start;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 2rem 0;
+
+            img {
+                border: solid 1px $gl__grey-dark;
+                margin-bottom: 2rem;
+                width: 100%;
+            }
+
+            p {
+                color: $gl__white;
+                font-size: 1.2rem;
+                letter-spacing: .05rem;
+                margin: 0 0 1.5rem;
+                text-shadow: 1px 1px 1px black;
+                width: 100%;
+            }
+        }
+
         p.footer-info {
             color: $gl__grey;
             font-size: 1.2rem;
@@ -189,8 +212,94 @@
     .company {
         .about-content {
             h1 {
-                font-size: 2.4rem;
+                font-size: 2.8rem;
                 margin: 5rem 0 2rem;
+            }
+
+            nav.page-links {
+                margin: 0 0 2rem;
+    
+                a {
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                    margin: .5rem 1.5rem .5rem 0;
+                }
+            }
+    
+            p {
+                font-size: 1.3rem;
+                margin: 0 0 1.5rem;
+            }
+    
+            ul {
+                font-size: 1.3rem;
+    
+                li {
+                    margin-bottom: 1rem;
+                }
+            }
+
+            a {
+                font-size: 1.3rem;
+                margin: .5rem 1.5rem .5rem 0;
+            }
+
+            #team {
+    
+                a {
+                    flex-direction: column;
+                    margin: 2rem 0 2rem;
+                    width: 100%;
+    
+                    img {
+                        border: solid 1px $gl__grey-dark;
+                        border-radius: .5rem;
+                        height: 20rem;
+                        margin: 0;
+                        object-fit: cover;
+                        object-position: center top;
+                        overflow: hidden;
+                        padding: 0;
+                        width: 20rem;
+                    }
+    
+                    .member-name {
+                        font-size: 1.8rem;
+                        font-weight: 700;
+                        margin-top: .5rem;
+                    }
+                    .member-title {
+                        color: $gl__grey;
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+    
+            #bio-content {
+                align-items: flex-start;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin: 2rem 0;
+    
+                img {
+                    border: solid 1px $gl__grey-dark;
+                    margin-bottom: 2rem;
+                    width: 30rem;
+                }
+    
+                p {
+                    font-size: 1.3rem;
+                    letter-spacing: .05rem;
+                    margin: 0 0 1.5rem;
+                }
+            }
+    
+            p.footer-info {
+                font-size: 1.3rem;
+                padding-bottom: 2rem;
             }
         }
     }
@@ -198,12 +307,12 @@
 
 @media screen and (min-width: 375px) {
     .company {
-        background: url('../assets/images/company_bg.jpg') repeat  right 50% top fixed;
+        background: url('../assets/images/company_bg.jpg') repeat  right 60% top fixed;
         background-size: cover;
 
         .about-content {
             h1 {
-                font-size: 2.4rem;
+                font-size: 2.8rem;
                 margin: 4rem 0 2rem;
             }
         }
@@ -212,12 +321,10 @@
 
 @media screen and (min-width: 390px) {
     .company {
-        background: url('../assets/images/company_bg.jpg') repeat  right 45% top fixed;
-        background-size: cover;
 
         .about-content {
             h1 {
-                font-size: 2.8rem;
+                font-size: 3rem;
                 margin: 6rem 0 2rem;
             }
         }
@@ -237,34 +344,20 @@
         background: url('../assets/images/company_bg.jpg') repeat  right 50% top fixed;
         background-size: cover;
 
-        .about-content {
-    
-        }
+        
     }
 }
 
 @media screen and (min-width: 768px) {
-    .company {
-        .about-content {
     
-        }
-    }
 }
 
 @media screen and (min-width: 820px) {
-    .company {
-        .about-content {
     
-        }
-    }
 }
 
 @media screen and (min-width: 1024px) {
-    .company {
-        .about-content {
     
-        }
-    }
 }
 
 @media screen and (min-width: 1280px) {
@@ -282,19 +375,11 @@
 }
 
 @media screen and (min-width: 1440px) {
-    .company {
-        .about-content {
     
-        }
-    }
 }
 
 @media screen and (min-width: 1600px) {
-    .company {
-        .about-content {
     
-        }
-    }
 }
 
 @media screen and (min-width: 1920px) {
