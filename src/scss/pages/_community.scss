@@ -1,0 +1,359 @@
+/*
+ *  --------------------------------------------------
+ *  |   COMMUNITY PARTNERS PAGE STYLES               |
+ *  --------------------------------------------------
+ *  Project: Ghost Light Perfomance, Inc.
+ *  Author: Jonathan Wheeler
+*/
+
+.community {
+    background: url('../assets/images/community_bg.jpg') repeat  right 25% top fixed;
+    background-size: cover;
+    transform: translateX(0);
+    @include animate( all, 250ms );
+
+    &::before {
+        background-image: linear-gradient(to right, rgba(0, 0, 0, .80),rgba(0, 0, 0, .20) 50%);
+        content: '';
+        inset: 0;
+        position: absolute;
+    }
+
+    .community-content {
+        margin-top: 2rem;
+        transform: translateX(0);
+        @include animate( all, 250ms );
+
+        h1 {
+            color: white;
+            font-size: 2.4rem;
+            font-weight: 400;
+            margin: 0 0 1rem;
+            text-shadow: 1px 1px 1px black;
+        }
+
+        nav.page-links {
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin: 0 0 2rem;
+
+            a {
+                color: $gl__light;
+                font-size: 1.1rem;
+                font-weight: 600;
+                margin: .5rem 1.5rem .5rem 0;
+                text-decoration: none;
+                text-shadow: 1px 1px 1px black;
+                text-transform: uppercase;
+                white-space: nowrap;
+                @include animate( color, 250ms );
+
+                &:active, &:hover {
+                    color: $gl__dark;
+                }
+            }
+        }
+
+        p {
+            color: $gl__white;
+            font-size: 1.2rem;
+            letter-spacing: .05rem;
+            margin: 0 0 1.5rem;
+            text-shadow: 1px 1px 1px black;
+
+            em {
+                font-style: italic;
+            }
+        }
+
+        ul {
+            color: $gl__white;
+            font-size: 1.2rem;
+            letter-spacing: .05rem;
+            text-shadow: 1px 1px 1px black;
+
+            li {
+                margin-bottom: 1rem;
+            }
+        }
+
+        a {
+            color: $gl__light;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: .5rem 1.5rem .5rem 0;
+            text-decoration: none;
+            text-shadow: 1px 1px 1px black;
+            text-transform: uppercase;
+            white-space: nowrap;
+            @include animate( color, 250ms );
+
+            &:active, &:hover {
+                color: $gl__dark;
+            }
+        }
+
+        p.footer-info {
+            color: $gl__grey;
+            font-size: 1.2rem;
+            padding-bottom: 2rem;
+            text-align: left;
+            text-decoration: none;
+            text-shadow: 1px 1px 2px black, 0 0 0.2em black;
+        }
+
+        &.hide {
+            display: none;
+        }
+        
+        &.right {
+            transform: translateX(100vw);
+        }
+        &.left {
+            transform: translateX(-100vw);
+        }
+
+    }
+
+    &.hide {
+        display: none;
+    }
+    
+    &.right {
+        transform: translateX(100vw);
+    }
+    &.left {
+        transform: translateX(-100vw);
+    }
+
+}
+
+@media screen and (min-width: 360px) {
+    .community {
+        .community-content {
+            h1 {
+                font-size: 2.8rem;
+                margin: 5rem 0 2rem;
+            }
+
+            nav.page-links {
+                margin: 0 0 2rem;
+    
+                a {
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                    margin: .5rem 1.5rem .5rem 0;
+                }
+            }
+    
+            p {
+                font-size: 1.3rem;
+                margin: 0 0 1.5rem;
+            }
+    
+            ul {
+                font-size: 1.3rem;
+    
+                li {
+                    margin-bottom: 1rem;
+                }
+            }
+
+            a {
+                font-size: 1.3rem;
+                margin: .5rem 1.5rem .5rem 0;
+            }
+    
+            p.footer-info {
+                font-size: 1.3rem;
+                padding-bottom: 2rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 375px) {
+    .community {
+        background: url('../assets/images/community_bg.jpg') repeat  right 25% top fixed;
+        background-size: cover;
+
+        .community-content {
+            h1 {
+                font-size: 2.8rem;
+                margin: 4rem 0 2rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 390px) {
+    .community {
+
+        .community-content {
+            h1 {
+                font-size: 3rem;
+                margin: 6rem 0 2rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 410px) {
+    
+}
+
+@media screen and (min-width: 425px) {
+    
+}
+
+@media screen and (min-width: 540px) {
+    .community {
+        background: url('../assets/images/community_bg.jpg') repeat  right 30% top fixed;
+        background-size: cover;
+
+        .community-content {
+            h1 {
+                font-size: 3.2rem;
+                margin: 5rem 0 2rem;
+            }
+
+            nav.page-links {
+                margin: 0 0 2rem;
+    
+                a {
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    margin: 1rem 2rem 1rem 0;
+                }
+            }
+    
+            p {
+                font-size: 1.4rem;
+                margin: 0 0 1.5rem;
+            }
+    
+            ul {
+                font-size: 1.4rem;
+    
+                li {
+                    margin-bottom: 1rem;
+                }
+            }
+
+            a {
+                font-size: 1.4rem;
+                margin: .5rem 1.5rem .5rem 0;
+            }
+    
+            p.footer-info {
+                font-size: 1.3rem;
+                padding-bottom: 2rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .community {
+        
+        .community-content {
+            h1 {
+                font-size: 3.2rem;
+                margin: 5rem 0 2rem;
+            }
+
+            nav.page-links {
+                margin: 0 0 2rem;
+    
+                a {
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    margin: 1rem 1.7rem 1rem 0;
+                }
+            }
+    
+            p {
+                font-size: 1.6rem;
+                margin: 0 0 2rem;
+            }
+    
+            ul {
+                font-size: 1.6rem;
+    
+                li {
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+            a {
+                font-size: 1.6rem;
+                margin: .5rem 1.5rem .5rem 0;
+            }
+    
+            p.footer-info {
+                clear: both;
+                font-size: 1.3rem;
+                padding-bottom: 2rem;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 820px) {
+    .community {
+        
+        .community-content {
+            nav.page-links {
+                margin: 0 0 2rem;
+    
+                a {
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    margin: 1rem 2.5rem 1rem 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .community {
+        
+        .community-content {
+            nav.page-links {
+                margin: 0 0 2rem;
+    
+                a {
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                    margin: 1rem 2.5rem 1rem 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .community {
+        background: url('../assets/images/community_bg.jpg') repeat  right 50% top fixed;
+        background-size: cover;
+        @include animate( all, 500ms );
+
+        
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    
+}
+
+@media screen and (min-width: 1600px) {
+    
+}
+
+@media screen and (min-width: 1920px) {
+    
+}

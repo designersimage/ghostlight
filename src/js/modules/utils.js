@@ -35,35 +35,40 @@ export const getPageLinks = () => {
                 /* Get the page navigation direction */
                 const navDirection = linkEl.dataset.nav;
 
-                /* Switch between directions and call appropriate function */
-                switch(navDirection) {
-                    case 'back':
-                        sessionStorage.setItem('direction', 'back');
-                        pageEl.classList.add('right');
-                        break;
+                document.querySelector('.modal-nav').classList.remove('show');
 
-                    case 'forward':
-                        sessionStorage.setItem('direction', 'forward');
-                        pageEl.classList.add('left');
-                        break;
-                    
-                    case 'group-back':
-                        sessionStorage.setItem('direction', 'group-back');
-                        pageContentEl.classList.add('right');
-                        break;
+                setTimeout(() => {
+                    /* Switch between directions and call appropriate function */
+                    switch(navDirection) {
+                        case 'back':
+                            sessionStorage.setItem('direction', 'back');
+                            pageEl.classList.add('right');
+                            break;
 
-                    case 'group-forward':
-                        sessionStorage.setItem('direction', 'group-forward');
-                        pageContentEl.classList.add('left');
-                        break;
+                        case 'forward':
+                            sessionStorage.setItem('direction', 'forward');
+                            pageEl.classList.add('left');
+                            break;
+                        
+                        case 'group-back':
+                            sessionStorage.setItem('direction', 'group-back');
+                            pageContentEl.classList.add('right');
+                            break;
 
-                    default:
-                        sessionStorage.setItem('direction', 'forward');
-                        pageEl.classList.add('left');
-                }
+                        case 'group-forward':
+                            sessionStorage.setItem('direction', 'group-forward');
+                            pageContentEl.classList.add('left');
+                            break;
+
+                        default:
+                            sessionStorage.setItem('direction', 'forward');
+                            pageEl.classList.add('left');
+                    }
+                }, 250);
+
                 setTimeout(() => {
                     window.location = url;
-                }, 250);
+                }, 500);
 
             });
         } else {
@@ -129,6 +134,11 @@ export const loadPageContent = async () => {
         case '/':
         case '/index.html':
             await loadHomePage();
+            break;
+
+        case '/community_partners/':
+        case '/community_partners/index.html':
+            await loadCommunityPage('about');
             break;
 
         case '/company/':
@@ -237,6 +247,23 @@ const addPageDirection = () => {
 const loadHomePage = async () => {
     const homePage = pagesData.find(page => page.slug === 'home');
     const contentEl = document.querySelector('main.home-content > .container');
+
+    addPageDirection();
+
+    const titleEl = document.createElement('h1');
+    titleEl.innerText = homePage.title;
+
+    const mainContentEl = document.createElement('section');
+    mainContentEl.classList.add('main-content');
+    mainContentEl.innerHTML = homePage.content;
+
+    contentEl.append(titleEl);
+    contentEl.append(mainContentEl);
+}
+
+const loadCommunityPage = async () => {
+    const homePage = pagesData.find(page => page.slug === 'community-partners');
+    const contentEl = document.querySelector('main.community-content > .container');
 
     addPageDirection();
 

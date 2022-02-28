@@ -90,7 +90,7 @@ export const pages = [
         slug: 'team',
         title: `Our Team`,
         content: `<nav class="page-links">
-                    <a href="./" data-nav="group-back" class="company__back-link" title="Go Back">« Back to Company</a>
+                    <a href="./" data-nav="group-back" class="back-link" title="Go Back">« Back to Company</a>
                 </nav>
                 <p><strong>Mission Statement:</strong> To enrich, educate, and prepare performers to further their artistic endeavors and careers by offering
                 training, management, and the tools to succeed in the professional industry.</p>
@@ -102,7 +102,7 @@ export const pages = [
         slug: 'bio',
         title: ``,
         content: `<div id="page-links">
-                    <a href="team.html" data-nav="group-back" class="company__back-link" title="Back to Team">« Back to Team</a>
+                    <a href="team.html" data-nav="group-back" class="back-link" title="Back to Team">« Back to Team</a>
                 </div>
                 <div id="bio-content"></div>
                 <p class="footer-info">Ghost Light Performance Inc. &copy; <span class="current-year"></span></p>`
@@ -112,7 +112,7 @@ export const pages = [
         slug: 'private-training',
         title: `Private Training`,
         content: `<nav class="page-links">
-                    <a href="./" data-nav="group-back" class="company__back-link" title="Go Back">« Back to Company</a>
+                    <a href="./" data-nav="group-back" class="back-link" title="Go Back">« Back to Company</a>
                 </nav>
                 <p>For the performer desiring additional instruction, Ghost Light offers the opportunity to meet 
                     with an experienced acting or modeling coach on an individual basis. Whether the performer is 
@@ -138,7 +138,7 @@ export const pages = [
         slug: 'showcases',
         title: `Showcases`,
         content: `<nav class="page-links">
-                    <a href="./" data-nav="group-back" class="company__back-link" title="Go Back">« Back to Company</a>
+                    <a href="./" data-nav="group-back" class="back-link" title="Go Back">« Back to Company</a>
                 </nav>
                 <p>Ghost Light Performance Showcases offer a chance for our workshop attendees to perform in front of an audience of friends, 
                     family, and fellow performers, as well as local professionals and our Ghost Light Community Partners. Providing the 
@@ -153,7 +153,7 @@ export const pages = [
         slug: 'offers',
         title: `Special Offers`,
         content: `<nav class="page-links">
-                    <a href="./" data-nav="group-back" class="company__back-link" title="Go Back">« Back to Company</a>
+                    <a href="./" data-nav="group-back" class="back-link" title="Go Back">« Back to Company</a>
                 </nav>
                 <p>Ghost Light Performance gladly offers tuition discounts and price breaks under certain circumstances. Our Current Special Offers include:</p>
                 <ul>
@@ -170,7 +170,7 @@ export const pages = [
         slug: 'industry-services',
         title: `Industry Services`,
         content: `<nav class="page-links">
-                    <a href="./" data-nav="group-back" class="company__back-link" title="Go Back">« Back to Company</a>
+                    <a href="./" data-nav="group-back" class="back-link" title="Go Back">« Back to Company</a>
                 </nav>
                 <p>At Ghost Light Performance, Inc., we believe that having the right tools is just as important as having the right 
                     training when it comes to building a successful acting or modeling career. For this reason, we emphasize the inclusion 
@@ -202,6 +202,17 @@ export const pages = [
                     </li>
                 </ul>
                 <p>Interested in our industry services? <a href="contact.html?ref=general" data-nav="group-forward" title="Interested in Industry Services">Click Here</a></p>
+                <p class="footer-info">Ghost Light Performance Inc. &copy; <span class="current-year"></span></p>`
+    },
+    {
+        id: 10,
+        slug: 'community-partners',
+        title: `Community Partners`,
+        content: `<nav class="page-links">
+                    <a href="../company/" data-nav="back" class="back-link" title="Go Back">« Back to Company</a>
+                </nav>
+                <p><em>There are currently no community partners registered with us.</em></p>
+                <p>Interested in becoming a community partner? <a href="../company/contact.html?ref=partner" data-nav="forward" title="Become a Community Partner">Click Here</a></p>
                 <p class="footer-info">Ghost Light Performance Inc. &copy; <span class="current-year"></span></p>`
     }
 ]
