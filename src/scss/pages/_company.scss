@@ -512,39 +512,69 @@
             }
     
             #bio-content {
-                align-items: flex-start;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
+                display: block;
                 margin: 2rem 0;
     
                 img {
                     border: solid 1px $gl__grey-dark;
-                    margin-bottom: 2rem;
-                    width: 30rem;
+                    float: left;
+                    margin: 0 2rem 2rem 0;
+                    width: 40%;
                 }
     
                 p {
+                    float: right;
                     font-size: 1.3rem;
+                    height: fit-content;
                     letter-spacing: .05rem;
                     margin: 0 0 1.5rem;
+                    padding-left: 2rem;
+                    width: calc(60% - 2rem);
                 }
             }
     
             p.footer-info {
+                clear: both;
                 font-size: 1.3rem;
                 padding-bottom: 2rem;
+                width: 100%;
             }
         }
     }
 }
 
 @media screen and (min-width: 820px) {
+    .company {
+        
+        .about-content {
+            nav.page-links {
+                margin: 0 0 2rem;
     
+                a {
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    margin: 1rem 2.5rem 1rem 0;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 1024px) {
+    .company {
+        
+        .about-content {
+            nav.page-links {
+                margin: 0 0 2rem;
     
+                a {
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                    margin: 1rem 2.5rem 1rem 0;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 1280px) {
@@ -556,7 +586,27 @@
         .about-content {
             @include animate( all, 500ms );
             
+            #bio-content {
+                display: block;
+                margin: 2rem 0;
     
+                img {
+                    border: solid 1px $gl__grey-dark;
+                    float: left;
+                    margin: 0 2rem 2rem 0;
+                    width: 20%;
+                }
+    
+                p {
+                    float: right;
+                    font-size: 1.3rem;
+                    height: fit-content;
+                    letter-spacing: .05rem;
+                    margin: 0 10% 1.5rem 0 ;
+                    padding-left: 2rem;
+                    width: calc(70% - 2rem);
+                }
+            }
         }
     }
 }
@@ -566,9 +616,59 @@
 }
 
 @media screen and (min-width: 1600px) {
+    .company {
+        .about-content {
+            
+            #bio-content {
+                display: block;
+                margin: 2rem 0;
     
+                img {
+                    border: solid 1px $gl__grey-dark;
+                    float: left;
+                    margin: 0 2rem 2rem 0;
+                    width: 20%;
+                }
+    
+                p {
+                    float: right;
+                    font-size: 1.3rem;
+                    height: fit-content;
+                    letter-spacing: .05rem;
+                    margin: 0 25% 1.5rem 0 ;
+                    padding-left: 2rem;
+                    width: calc(55% - 2rem);
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 1920px) {
+    .company {
+        .about-content {
+            
+            #bio-content {
+                display: block;
+                margin: 2rem 0;
     
+                img {
+                    border: solid 1px $gl__grey-dark;
+                    float: left;
+                    margin: 0 2rem 2rem 0;
+                    width: 20%;
+                }
+    
+                p {
+                    float: right;
+                    font-size: 1.3rem;
+                    height: fit-content;
+                    letter-spacing: .05rem;
+                    margin: 0 30% 1.5rem 0 ;
+                    padding-left: 2rem;
+                    width: calc(50% - 2rem);
+                }
+            }
+        }
+    }
 }
