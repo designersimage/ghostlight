@@ -94,6 +94,32 @@
             }
         }
 
+        .course-content {
+            align-items: flex-start;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            article {
+                flex: 0 100%;
+                margin-bottom: 3rem;
+
+                h1 {
+                    margin: 0 0 0 0;
+                }
+                h3 {
+                    color: $gl__dark;
+                    font-size: 1.4rem;
+                    margin: 0 0 1.5rem 0;
+                    text-shadow: 1px 1px 1px black;
+                }
+
+                a {
+                    text-transform: uppercase;
+                }
+            }
+        }
+
         p.footer-info {
             color: $gl__grey;
             font-size: 1.2rem;

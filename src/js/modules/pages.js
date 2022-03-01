@@ -200,6 +200,7 @@ export const loadAboutPage = async (slug, id = null) => {
     if (slug === 'bio' && id) {
         const bioEl = document.querySelector('#bio-content');
         const bio = teamData.find(member => member.id === id);
+        document.title = `Ghost Light Performance, Inc. | Bio - ${bio.name}`;
         
         const nameEl = document.querySelector('.about-content > .container > h1');
         nameEl.innerText = bio.name;
@@ -249,9 +250,9 @@ export const loadAboutPage = async (slug, id = null) => {
         const workshopPage = pagesData.find(page => page.slug === 'course');
         mainContentEl.innerHTML = workshopPage.content;
 
-        const courseEl = document.querySelector('#course-content');
+        const courseEl = document.querySelector('.course-content');
         const course = workshopsData.find(course => course.id === id);
-        console.log(course)
+        document.title = `Ghost Light Performance, Inc. | ${course.title.split(' ')[0]} ${course.subtitle}`
         const nameEl = document.querySelector('.workshop-content > .container > h1');
         nameEl.remove();
 
@@ -280,7 +281,7 @@ export const loadAboutPage = async (slug, id = null) => {
         const scheduleTitle = document.createElement('h1');
         scheduleTitle.innerText = 'Schedule';
         const scheduleSubTitle = document.createElement('h3');
-        scheduleSubTitle.innerText = '';
+        scheduleSubTitle.innerHTML = '&nbsp;';
 
         const scheduleIntro = document.createElement('p');
         scheduleIntro.innerText = course.scheduleIntro;
@@ -295,7 +296,7 @@ export const loadAboutPage = async (slug, id = null) => {
         const scheduleTag = document.createElement('p');
         scheduleTag.innerHTML = course.closeTag;
 
-        scheduleEl.append(scheduleTitle, scheduleIntro, scheduleList, scheduleTag);
+        scheduleEl.append(scheduleTitle, scheduleSubTitle, scheduleIntro, scheduleList, scheduleTag);
 
         const benValueEl = document.createElement('article');
         benValueEl.classList.add('benefit-value');
@@ -303,7 +304,7 @@ export const loadAboutPage = async (slug, id = null) => {
         const benValueTitle = document.createElement('h1');
         benValueTitle.innerText = 'Benefits & Value';
         const benValueSubTitle = document.createElement('h3');
-        benValueSubTitle.innerText = '';
+        benValueSubTitle.innerHTML = '&nbsp;';
 
         const benefitsTitle = document.createElement('p');
         benefitsTitle.classList.add('benefits-title');

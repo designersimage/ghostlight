@@ -264,7 +264,7 @@ export const pages = [
         id: 16,
         slug: 'course',
         title: ``,
-        content: `<div id="course-content"></div>
+        content: `<div class="course-content"></div>
                 <p class="footer-info">Ghost Light Performance Inc. &copy; <span class="current-year"></span></p>`
     }
 ]
