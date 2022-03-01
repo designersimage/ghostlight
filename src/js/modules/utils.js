@@ -5,8 +5,8 @@
  *  Project: Ghost Light Perfomance, Inc.
  *  Author: Jonathan Wheeler
 */
-import { pagesData, teamData, workshopsData  } from "../preload";
-import { pageEl, pageContentEl, direction } from "../main";
+import { pageEl, pageContentEl } from "../main";
+import { routeLoader } from "./routeLoader";
 
 /**
  * A function for getting all links on page to navigation direction.
@@ -130,57 +130,7 @@ export const loadPageContent = async () => {
     const urlParams = new URLSearchParams(queryString);
     basename = basename.split('?')[0];
 
-    switch(basename) {
-        case '/':
-        case '/index.html':
-            await loadHomePage();
-            break;
-
-        case '/community_partners/':
-        case '/community_partners/index.html':
-            await loadCommunityPage('about');
-            break;
-
-        case '/company/':
-        case '/company/index.html':
-            await loadAboutPage('about');
-            break;
-
-        case '/company/bio.html':
-            await loadAboutPage('bio', parseInt(urlParams.get('id')));
-            break;        
-
-        case '/company/contact.html':
-            await loadAboutPage('contact');
-            break;
-
-        case '/company/industry_services.html':
-            await loadAboutPage('industry-services');
-            break;
-    
-        case '/company/offers.html':
-            await loadAboutPage('offers');
-            break;
-
-        case '/company/industry_services.html':
-            await loadAboutPage('industry-services');
-            break;
-    
-        case '/company/private_training.html':
-            await loadAboutPage('private-training');
-            break;
-
-        case '/company/showcases.html':
-            await loadAboutPage('showcases');
-            break;
-
-        case '/company/team.html':
-            await loadAboutPage('team');
-            break;
-
-        default:
-            console.log("404 Not Found");
-    }
+    routeLoader(basename);
 
     const currentYear = document.querySelectorAll('.current-year');
     const date = new Date();
@@ -218,129 +168,4 @@ export const loadPageContent = async () => {
         }
     }, 500);
     
-}
-
-const addPageDirection = () => {
-    switch(direction) {
-        case 'back':
-            pageEl.classList.add('left');
-            break;
-
-        case 'forward':
-            pageEl.classList.add('right');
-            break;
-
-        case 'group-back':
-            pageContentEl.classList.add('left');
-            break;
-
-        case 'group-forward':
-            pageContentEl.classList.add('right');
-            break;
-
-        default:
-            pageContentEl.classList.add('right');
-    }
-}
-
-
-const loadHomePage = async () => {
-    const homePage = pagesData.find(page => page.slug === 'home');
-    const contentEl = document.querySelector('main.home-content > .container');
-
-    addPageDirection();
-
-    const titleEl = document.createElement('h1');
-    titleEl.innerText = homePage.title;
-
-    const mainContentEl = document.createElement('section');
-    mainContentEl.classList.add('main-content');
-    mainContentEl.innerHTML = homePage.content;
-
-    contentEl.append(titleEl);
-    contentEl.append(mainContentEl);
-}
-
-const loadCommunityPage = async () => {
-    const homePage = pagesData.find(page => page.slug === 'community-partners');
-    const contentEl = document.querySelector('main.community-content > .container');
-
-    addPageDirection();
-
-    const titleEl = document.createElement('h1');
-    titleEl.innerText = homePage.title;
-
-    const mainContentEl = document.createElement('section');
-    mainContentEl.classList.add('main-content');
-    mainContentEl.innerHTML = homePage.content;
-
-    contentEl.append(titleEl);
-    contentEl.append(mainContentEl);
-}
-
-const loadAboutPage = async (slug, id = null) => {
-    const aboutPage = pagesData.find(page => page.slug === slug);
-    const contentEl = document.querySelector('main.about-content > .container');
-
-    addPageDirection();
-
-    const titleEl = document.createElement('h1');
-    titleEl.innerText = aboutPage.title;
-
-    const mainContentEl = document.createElement('section');
-    mainContentEl.classList.add('main-content');
-    mainContentEl.innerHTML = aboutPage.content;
-
-    contentEl.append(titleEl);
-    contentEl.append(mainContentEl);
-
-    if (slug === 'team') {
-        const teamEl = document.querySelector('#team');
-        teamData.forEach(member => {
-            const memberLink = document.createElement('a');
-            memberLink.setAttribute('data-nav', 'group-forward');
-            memberLink.setAttribute('href', `bio.html?id=${member.id}`)
-            memberLink.classList.add('member');
-
-            const memberImg = document.createElement('img');
-            memberImg.setAttribute('src', `../assets/images/headshots/${member.headshot}`);
-            memberImg.setAttribute('alt', member.name);
-
-            const memberName = document.createElement('span');
-            memberName.classList.add('member-name');
-            memberName.innerText = member.name;
-
-            const memberTitle = document.createElement('span');
-            memberTitle.classList.add('member-title');
-            memberTitle.innerText = member.title;
-
-            memberLink.append(memberImg);
-            memberLink.append(memberName);
-            memberLink.append(memberTitle);
-            teamEl.append(memberLink);
-        });
-    }
-
-    if (slug === 'bio' && id) {
-        const bioEl = document.querySelector('#bio-content');
-        const bio = teamData.find(member => member.id === id);
-        
-        const nameEl = document.querySelector('.about-content > .container > h1');
-        nameEl.innerText = bio.name;
-
-        const imgEl = document.createElement('img');
-        imgEl.setAttribute('src', `../assets/images/headshots/${bio.headshot}`);
-        imgEl.setAttribute('alt', bio.name);
-
-        bioEl.append(imgEl);
-
-        const contentParagraphs = bio.bio.split('\n');
-        console.log(contentParagraphs)
-        contentParagraphs.forEach(paragraph => {
-            const contentEl = document.createElement('p');
-            contentEl.innerHTML = paragraph;
-            bioEl.append(contentEl);
-        })
-		
-    }
 }
