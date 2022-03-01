@@ -27,8 +27,18 @@ export const getPageLinks = () => {
                 e.preventDefault();
 
                 /* Get the a element */
-                const linkEl = e.target.tagName.toLowerCase() !== 'a' ? e.target.parentElement : e.target;
-
+                let linkEl;
+                if (e.target.tagName.toLowerCase() !== 'a') {
+                    if (e.target.tagName.toLowerCase() === 'path') {
+                        linkEl = e.target.parentElement.parentElement.parentElement
+                    } else {
+                        linkEl = e.target.parentElement
+                    }
+                    
+                } else {
+                    linkEl = e.target;
+                }
+                
                 /* Get the url reference */
                 const url = linkEl.href;
 
@@ -126,8 +136,6 @@ export const getPageLinks = () => {
  */
 export const loadPageContent = async () => {
     let basename = window.location.pathname;
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
     basename = basename.split('?')[0];
 
     routeLoader(basename);

@@ -7,7 +7,7 @@
 */
 
 .workshop {
-    background: url('../assets/images/workshop_bg.jpg') repeat  right 25% top fixed;
+    background: url('../assets/images/workshop_bg.jpg') repeat  right 45% top fixed;
     background-size: cover;
     transform: translateX(0);
     @include animate( all, 250ms );
@@ -83,10 +83,9 @@
             color: $gl__light;
             font-size: 1.2rem;
             font-weight: 600;
-            margin: .5rem 1.5rem .5rem 0;
+            margin: .5rem 0 .5rem 0;
             text-decoration: none;
             text-shadow: 1px 1px 1px black;
-            text-transform: uppercase;
             white-space: nowrap;
             @include animate( color, 250ms );
 
@@ -163,7 +162,7 @@
 
             a {
                 font-size: 1.3rem;
-                margin: .5rem 1.5rem .5rem 0;
+                margin: .5rem 0 .5rem 0;
             }
     
             p.footer-info {
@@ -176,7 +175,7 @@
 
 @media screen and (min-width: 375px) {
     .workshop {
-        background: url('../assets/images/workshop_bg.jpg') repeat  right 25% top fixed;
+        background: url('../assets/images/workshop_bg.jpg') repeat  right 45% top fixed;
         background-size: cover;
 
         .workshop-content {
@@ -210,7 +209,7 @@
 
 @media screen and (min-width: 540px) {
     .workshop {
-        background: url('../assets/images/workshop_bg.jpg') repeat  right 30% top fixed;
+        background: url('../assets/images/workshop_bg.jpg') repeat  right 60% top fixed;
         background-size: cover;
 
         .workshop-content {
@@ -244,7 +243,7 @@
 
             a {
                 font-size: 1.4rem;
-                margin: .5rem 1.5rem .5rem 0;
+                margin: .5rem 0 .5rem 0;
             }
     
             p.footer-info {
@@ -259,6 +258,7 @@
     .workshop {
         
         .workshop-content {
+            width: 92%;
             h1 {
                 font-size: 3.2rem;
                 margin: 5rem 0 2rem;
@@ -289,7 +289,7 @@
 
             a {
                 font-size: 1.6rem;
-                margin: .5rem 1.5rem .5rem 0;
+                margin: .5rem 0 .5rem 0;
             }
     
             p.footer-info {
@@ -306,6 +306,8 @@
     .workshop {
         
         .workshop-content {
+            width: 80%;
+
             nav.page-links {
                 margin: 0 0 2rem;
     
@@ -323,6 +325,8 @@
     .workshop {
         
         .workshop-content {
+            width: 75%;
+
             nav.page-links {
                 margin: 0 0 2rem;
     
@@ -342,12 +346,18 @@
         background-size: cover;
         @include animate( all, 500ms );
 
-        
+        .workshop-content {
+            width: 70%;
+        }
     }
 }
 
 @media screen and (min-width: 1440px) {
-    
+    .workshop {
+        .workshop-content {
+            width: 55%;
+        }
+    }
 }
 
 @media screen and (min-width: 1600px) {

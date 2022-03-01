@@ -5,7 +5,7 @@
  *  Project: Ghost Light Perfomance, Inc.
  *  Author: Jonathan Wheeler
 */
-import { loadAboutPage, loadCommunityPage, loadHomePage } from "./pages";
+import { loadAboutPage, loadActorsPage, loadAuditionsPage, loadCareersPage, loadCommunityPage, loadHomePage, loadModelsPage, loadWorkshopPage } from "./pages";
 
 /**
  * A function for loading the webpage content based on the page url.
@@ -13,6 +13,9 @@ import { loadAboutPage, loadCommunityPage, loadHomePage } from "./pages";
  * @return none
  */
 export const routeLoader = async (basename) => {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+
     switch(basename) {
         case '/':
         case '/index.html':
@@ -23,6 +26,16 @@ export const routeLoader = async (basename) => {
         case '/community_partners/index.html':
             await loadCommunityPage('about');
             break;
+
+        case '/actors/':
+        case '/actors/index.html':
+            await loadActorsPage('about');
+            break;
+
+        case '/auditions/':
+        case '/auditions/index.html':
+            await loadAuditionsPage('about');
+            break;        
 
         case '/company/':
         case '/company/index.html':
@@ -59,6 +72,25 @@ export const routeLoader = async (basename) => {
 
         case '/company/team.html':
             await loadAboutPage('team');
+            break;
+
+        case '/career/':
+        case '/career/index.html':
+            await loadCareersPage();
+            break;
+
+        case '/models/':
+        case '/models/index.html':
+            await loadModelsPage();
+            break;
+        
+        case '/workshops/':
+        case '/wrkshops/index.html':
+            await loadWorkshopPage();
+            break;
+            
+        case '/workshops/course.html':
+            await loadWorkshopPage(parseInt(urlParams.get('id')));
             break;
 
         default:

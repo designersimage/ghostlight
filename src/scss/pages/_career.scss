@@ -7,7 +7,7 @@
 */
 
 .career {
-    background: url('../assets/images/career_bg.jpg') repeat  right 25% top fixed;
+    background: url('../assets/images/career_bg.jpg') repeat  right 48% top fixed;
     background-size: cover;
     transform: translateX(0);
     @include animate( all, 250ms );
@@ -176,7 +176,7 @@
 
 @media screen and (min-width: 375px) {
     .career {
-        background: url('../assets/images/career_bg.jpg') repeat  right 25% top fixed;
+        background: url('../assets/images/career_bg.jpg') repeat  right 48% top fixed;
         background-size: cover;
 
         .career-content {
@@ -210,7 +210,7 @@
 
 @media screen and (min-width: 540px) {
     .career {
-        background: url('../assets/images/career_bg.jpg') repeat  right 30% top fixed;
+        background: url('../assets/images/career_bg.jpg') repeat  right 55% top fixed;
         background-size: cover;
 
         .career-content {

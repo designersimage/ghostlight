@@ -264,10 +264,7 @@ export const pages = [
         id: 16,
         slug: 'course',
         title: ``,
-        content: `<div id="page-links">
-                    <a href="./" data-nav="group-back" class="back-link" title="Back to Workshops">« Back to Workshops</a>
-                </div>
-                <div id="course-content"></div>
+        content: `<div id="course-content"></div>
                 <p class="footer-info">Ghost Light Performance Inc. &copy; <span class="current-year"></span></p>`
     }
 ]
@@ -315,7 +312,7 @@ export const workshops = [
                 'Final Dress', 
                 'Ghost Light Performance Showcase'
         ],
-        closeTag: `After mastering these concepts, we encourage our performers to explore our progressive acting and modeling series. <a href="./" class="group-back" title="View Workshops">Click Here</a> for our complete list of workshops provided.`,
+        closeTag: `After mastering these concepts, we encourage our performers to explore our progressive acting and modeling series. <a href="./" data-nav="group-back" title="View Workshops">Click Here</a> for our complete list of workshops provided.`,
         benefitValue: {
             benefits: [
                 {
@@ -387,7 +384,7 @@ export const workshops = [
                 'Workshop till you Drop', 
                 'Ghost Light Performance Showcase'
         ],
-        closeTag: `After mastering these concepts, we encourage our performers to explore our progressive acting and modeling series. <a href="./" class="group-back" title="View Workshops>Click Here</a> for our complete list of workshops provided.`,
+        closeTag: `After mastering these concepts, we encourage our performers to explore our progressive acting and modeling series. <a href="./" data-nav="group-back" title="View Workshops>Click Here</a> for our complete list of workshops provided.`,
         benefitValue: {
             benefits: [
                 {
@@ -445,7 +442,7 @@ export const workshops = [
                 'Photoshoot Day', 
                 'Ghost Light Performance Showcase'
         ],
-        closeTag: `After mastering these concepts, we encourage our performers to explore our progressive acting and modeling series. <a href="./" class="group-back" title="View Workshops>Click Here</a> for our complete list of workshops provided.`,
+        closeTag: `After mastering these concepts, we encourage our performers to explore our progressive acting and modeling series. <a href="./" data-nav="group-back" title="View Workshops>Click Here</a> for our complete list of workshops provided.`,
         benefitValue: {
             benefits: [
                 {
@@ -503,7 +500,7 @@ export const workshops = [
                 'Workshop till you Drop', 
                 'Ghost Light Performance Showcase'
         ],
-        closeTag: `After mastering these concepts, we encourage our performers to explore our progressive acting and modeling series. <a href="./" class="group-back" title="View Workshops>Click Here</a> for our complete list of workshops provided.`,
+        closeTag: `After mastering these concepts, we encourage our performers to explore our progressive acting and modeling series. <a href="./" data-nav="group-back" title="View Workshops>Click Here</a> for our complete list of workshops provided.`,
         benefitValue: {
             benefits: [
                 {
@@ -561,7 +558,7 @@ export const workshops = [
                 'Partner & Props Photoshoot Day', 
                 'Ghost Light Performance Showcase'
         ],
-        closeTag: `After mastering these concepts, we encourage our performers to explore our progressive acting and modeling series. <a href="./" class="group-back" title="View Workshops>Click Here</a> for our complete list of workshops provided.`,
+        closeTag: `After mastering these concepts, we encourage our performers to explore our progressive acting and modeling series. <a href="./" data-nav="group-back" title="View Workshops>Click Here</a> for our complete list of workshops provided.`,
         benefitValue: {
             benefits: [
                 {
@@ -619,7 +616,7 @@ export const workshops = [
                 'Acting vs Emoting', 
                 'Ghost Light Advanced Showcase'
         ],
-        closeTag: `After mastering these concepts, we encourage our performers to explore our 2-day Intensives and Private Coaching. <a href="./" class="group-back" title="View Workshops>Click Here</a> for our complete list of workshops provided.`,
+        closeTag: `After mastering these concepts, we encourage our performers to explore our 2-day Intensives and Private Coaching. <a href="./" data-nav="group-back" title="View Workshops>Click Here</a> for our complete list of workshops provided.`,
         benefitValue: {
             benefits: [
                 {
@@ -678,7 +675,7 @@ export const workshops = [
                 ['Commercial', 'Fashion', 'Editorial'], 
                 'Advanced Fashion Showcase'
         ],
-        closeTag: `After mastering these concepts, we encourage our performers to explore our 2-day Intensives and Private Coaching. <a href="./" class="group-back" title="View Workshops>Click Here</a> for our complete list of workshops provided.`,
+        closeTag: `After mastering these concepts, we encourage our performers to explore our 2-day Intensives and Private Coaching. <a href="./" data-nav="group-back" title="View Workshops>Click Here</a> for our complete list of workshops provided.`,
         benefitValue: {
             benefits: [
                 {

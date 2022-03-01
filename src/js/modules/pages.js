@@ -130,7 +130,7 @@ export const loadCommunityPage = async () => {
  */
  export const loadModelsPage = async () => {
     const modelsPage = pagesData.find(page => page.slug === 'models');
-    const contentEl = document.querySelector('main.model-content > .container');
+    const contentEl = document.querySelector('main.models-content > .container');
 
     addPageDirection();
 
@@ -219,6 +219,155 @@ export const loadAboutPage = async (slug, id = null) => {
         })
 		
     }
+}
+
+
+/**
+ * A function for loading the workshops page content.
+ * 
+ * @param id    Int         The ID value for the course page
+ * 
+ * @return none
+ */
+ export const loadWorkshopPage = async (id = null) => {
+    const workshopPage = pagesData.find(page => page.slug === 'workshop');
+    const contentEl = document.querySelector('main.workshop-content > .container');
+
+    addPageDirection();
+
+    const titleEl = document.createElement('h1');
+    titleEl.innerText = workshopPage.title;
+
+    const mainContentEl = document.createElement('section');
+    mainContentEl.classList.add('main-content');
+    mainContentEl.innerHTML = workshopPage.content;
+
+    contentEl.append(titleEl);
+    contentEl.append(mainContentEl);
+
+    if (id) {
+        const workshopPage = pagesData.find(page => page.slug === 'course');
+        mainContentEl.innerHTML = workshopPage.content;
+
+        const courseEl = document.querySelector('#course-content');
+        const course = workshopsData.find(course => course.id === id);
+        console.log(course)
+        const nameEl = document.querySelector('.workshop-content > .container > h1');
+        nameEl.remove();
+
+        const descriptionEl = document.createElement('article');
+        descriptionEl.classList.add('description');
+
+        const descriptionTitle = document.createElement('h1');
+        descriptionTitle.innerText = course.title;
+        const descriptionSubTitle = document.createElement('h3');
+        descriptionSubTitle.innerText = course.subtitle;
+
+        const descriptionContent = document.createElement('p');
+        descriptionContent.innerText = course.description;
+
+        const backLink = document.createElement('a');
+        backLink.setAttribute('data-nav', 'group-back');
+        backLink.setAttribute('href', './');
+        backLink.setAttribute('title', 'Back to Workshops')
+        backLink.innerText = '« Back to Workshops'
+
+        descriptionEl.append(descriptionTitle, descriptionSubTitle, descriptionContent, backLink);
+
+        const scheduleEl = document.createElement('article');
+        scheduleEl.classList.add('schedule');
+
+        const scheduleTitle = document.createElement('h1');
+        scheduleTitle.innerText = 'Schedule';
+        const scheduleSubTitle = document.createElement('h3');
+        scheduleSubTitle.innerText = '';
+
+        const scheduleIntro = document.createElement('p');
+        scheduleIntro.innerText = course.scheduleIntro;
+
+        const scheduleList = document.createElement('ul');
+        course.scheduleList.forEach(item => {
+            const listItem = document.createElement('li');
+            listItem.innerText = item;
+            scheduleList.append(listItem);
+        });
+
+        const scheduleTag = document.createElement('p');
+        scheduleTag.innerHTML = course.closeTag;
+
+        scheduleEl.append(scheduleTitle, scheduleIntro, scheduleList, scheduleTag);
+
+        const benValueEl = document.createElement('article');
+        benValueEl.classList.add('benefit-value');
+
+        const benValueTitle = document.createElement('h1');
+        benValueTitle.innerText = 'Benefits & Value';
+        const benValueSubTitle = document.createElement('h3');
+        benValueSubTitle.innerText = '';
+
+        const benefitsTitle = document.createElement('p');
+        benefitsTitle.classList.add('benefits-title');
+        const span1 = document.createElement('span');
+        span1.innerText = 'Service/Tools Included';
+        const span2 = document.createElement('span');
+        span2.classList.add('table-cost');
+        benefitsTitle.append(span1, span2);
+        benValueEl.append(benValueTitle, benValueSubTitle, benefitsTitle)
+        course.benefitValue.benefits.forEach(benefit => {
+            const lineItem = document.createElement('p');
+            const span1 = document.createElement('span');
+            span1.innerText = benefit.benefit;
+            const cost = document.createElement('strong');
+            cost.innerText = benefit.benefitCost;
+            lineItem.append(span1, cost);
+
+            const benefitList = document.createElement('ul');
+            benefit.listItems.forEach(item => {
+                const benefitItem = document.createElement('li');
+                const span1 = document.createElement('span');
+                span1.innerHTML = item.item;
+                const span2 = document.createElement('span');
+                span2.innerText = item.cost;
+                benefitItem.append(span1, span2);
+                benefitList.append(benefitItem);
+            })
+            benValueEl.append(lineItem, benefitList);
+        })
+
+        const standardTotal = document.createElement('p');
+        const standardTitle = document.createElement('span');
+        standardTitle.innerText = 'Standard Total:';
+        const standardCost = document.createElement('span');
+        standardCost.innerText = course.benefitValue.standardTotal;
+        standardTotal.append(standardTitle, standardCost);
+
+        const glTotal = document.createElement('p');
+        glTotal.classList.add('gl-total');
+        const totalTitle = document.createElement('span');
+        totalTitle.innerText = 'Ghost Light Total:'
+        const totalCost = document.createElement('span');
+        totalCost.innerText = course.benefitValue.glpTotal;
+        glTotal.append(totalTitle, totalCost);
+
+        benValueEl.append(standardTotal, glTotal);
+        courseEl.append(descriptionEl, scheduleEl, benValueEl);
+
+		return;
+    }
+    const workshopsEl = document.querySelector('#workshops');
+    const workshops = workshopsData;
+    workshops.forEach(workshop => {
+        const workshopItemEl = document.createElement('p');
+        const workshopItemLinkEl = document.createElement('a');
+        workshopItemLinkEl.setAttribute('data-nav', 'group-forward');
+        workshopItemLinkEl.setAttribute('href', `course.html?id=${workshop.id}`);
+        workshopItemLinkEl.classList.add('workshop-link');
+        workshopItemLinkEl.innerText = `${workshop.title.split(' ')[0]} - ${workshop.subtitle} » `;
+        workshopItemEl.append(workshopItemLinkEl);
+        workshopItemEl.append(`${workshop.pitch}`)
+        workshopsEl.append(workshopItemEl);
+    })
+    console.log(workshopsData)
 }
 
 
