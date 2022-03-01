@@ -214,6 +214,61 @@ export const pages = [
                 <p><em>There are currently no community partners registered with us.</em></p>
                 <p>Interested in becoming a community partner? <a href="../company/contact.html?ref=partner" data-nav="forward" title="Become a Community Partner">Click Here</a></p>
                 <p class="footer-info">Ghost Light Performance Inc. &copy; <span class="current-year"></span></p>`
+    },
+    {
+        id: 11,
+        slug: 'actors',
+        title: `Actors`,
+        content: `<p><em>There are currently no actors registered with us.</em></p>
+                <p>Interested in becoming an actor with our company? <a href="../company/contact.html?ref=audition" data-nav="forward" title="Audition for Ghost Light Performance">Click Here</a></p>
+                <p class="footer-info">Ghost Light Performance Inc. &copy; <span class="current-year"></span></p>`
+    },
+    {
+        id: 12,
+        slug: 'auditions',
+        title: `Sign up to audition!`,
+        content: `<p>Auditions for Ghost Light Performance Training take place on Saturday mornings each week starting October <span class="current-year"></span>.</p>
+        <ul>
+            <li>New performers auditioning for the Introductory Workshop series will be provided a commercial script for an on-camera reading for a Ghost Light Acting Coach. In addition, the performer will audition with a Ghost Light Modeling Coach to assess his or her runway walk and poses.</li>
+
+            <li>Actors of all skill levels auditioning for the acting specific series should prepare a monologue with which to audition on-camera for a Ghost Light Acting Coach. The actor should also bring a current headshot and resume, if available.</li>
+
+            <li>Models of all skill levels auditioning for the modeling specific series should come prepared to demonstrate their runway walk and pose for photos for a Ghost Light Modeling Coach. The model should bring appropriate shoes, and a current headshot or comp card, if available.</li>
+        </ul>
+        <p>Interested in auditioning for Ghost Light Performance? <a href="../company/contact.html?ref=audition" data-nav="forward" title="Audition for Ghost Light">Click Here</a></p>
+        <p class="footer-info">Ghost Light Performance Inc. &copy; <span class="current-year"></span></p>`
+    },
+    {
+        id: 13,
+        slug: 'career',
+        title: `Start your career!`,
+        content: `<p><em>Ghost Light is not currently hiring. Please check back to apply for positions as they become available.</em></p>
+                <p class="footer-info">Ghost Light Performance Inc. &copy; <span class="current-year"></span></p>`
+    },
+    {
+        id: 14,
+        slug: 'models',
+        title: `Models`,
+        content: `<p><em>There are currently no models registered with us.</em></p>
+                <p>Interested in becoming a model with our company? <a href="../company/contact.html?ref=audition" data-nav="forward" title="Audition for Ghost Light Performance">Click Here</a></p>
+                <p class="footer-info">Ghost Light Performance Inc. &copy; <span class="current-year"></span></p>`
+    },
+    {
+        id: 15,
+        slug: 'workshop',
+        title: `Check out our workshops`,
+        content: `<div id="workshops"></div>
+                <p class="footer-info">Ghost Light Performance Inc. &copy; <span class="current-year"></span></p>`
+    },
+    {
+        id: 16,
+        slug: 'course',
+        title: ``,
+        content: `<div id="page-links">
+                    <a href="./" data-nav="group-back" class="back-link" title="Back to Workshops">« Back to Workshops</a>
+                </div>
+                <div id="course-content"></div>
+                <p class="footer-info">Ghost Light Performance Inc. &copy; <span class="current-year"></span></p>`
     }
 ]
 
