@@ -32,26 +32,119 @@ export const loadHomePage = async () => {
 
 
 /**
- * A function for loading the community partners content.
+ * A function for loading the community partners page content.
  * 
  * @return none
  */
 export const loadCommunityPage = async () => {
-    const homePage = pagesData.find(page => page.slug === 'community-partners');
+    const communityPage = pagesData.find(page => page.slug === 'community-partners');
     const contentEl = document.querySelector('main.community-content > .container');
 
     addPageDirection();
 
     const titleEl = document.createElement('h1');
-    titleEl.innerText = homePage.title;
+    titleEl.innerText = communityPage.title;
 
     const mainContentEl = document.createElement('section');
     mainContentEl.classList.add('main-content');
-    mainContentEl.innerHTML = homePage.content;
+    mainContentEl.innerHTML = communityPage.content;
 
     contentEl.append(titleEl);
     contentEl.append(mainContentEl);
 }
+
+
+/**
+ * A function for loading the auditions page content.
+ * 
+ * @return none
+ */
+ export const loadAuditionsPage = async () => {
+    const auditionsPage = pagesData.find(page => page.slug === 'auditions');
+    const contentEl = document.querySelector('main.audition-content > .container');
+
+    addPageDirection();
+
+    const titleEl = document.createElement('h1');
+    titleEl.innerText = auditionsPage.title;
+
+    const mainContentEl = document.createElement('section');
+    mainContentEl.classList.add('main-content');
+    mainContentEl.innerHTML = auditionsPage.content;
+
+    contentEl.append(titleEl);
+    contentEl.append(mainContentEl);
+}
+
+
+/**
+ * A function for loading the career page content.
+ * 
+ * @return none
+ */
+ export const loadCareersPage = async () => {
+    const careersPage = pagesData.find(page => page.slug === 'career');
+    const contentEl = document.querySelector('main.career-content > .container');
+
+    addPageDirection();
+
+    const titleEl = document.createElement('h1');
+    titleEl.innerText = careersPage.title;
+
+    const mainContentEl = document.createElement('section');
+    mainContentEl.classList.add('main-content');
+    mainContentEl.innerHTML = careersPage.content;
+
+    contentEl.append(titleEl);
+    contentEl.append(mainContentEl);
+}
+
+
+/**
+ * A function for loading the actors page content.
+ * 
+ * @return none
+ */
+ export const loadActorsPage = async () => {
+    const actorsPage = pagesData.find(page => page.slug === 'actors');
+    const contentEl = document.querySelector('main.actor-content > .container');
+
+    addPageDirection();
+
+    const titleEl = document.createElement('h1');
+    titleEl.innerText = actorsPage.title;
+
+    const mainContentEl = document.createElement('section');
+    mainContentEl.classList.add('main-content');
+    mainContentEl.innerHTML = actorsPage.content;
+
+    contentEl.append(titleEl);
+    contentEl.append(mainContentEl);
+}
+
+
+/**
+ * A function for loading the models page content.
+ * 
+ * @return none
+ */
+ export const loadModelsPage = async () => {
+    const modelsPage = pagesData.find(page => page.slug === 'models');
+    const contentEl = document.querySelector('main.model-content > .container');
+
+    addPageDirection();
+
+    const titleEl = document.createElement('h1');
+    titleEl.innerText = modelsPage.title;
+
+    const mainContentEl = document.createElement('section');
+    mainContentEl.classList.add('main-content');
+    mainContentEl.innerHTML = modelsPage.content;
+
+    contentEl.append(titleEl);
+    contentEl.append(mainContentEl);
+}
+
 
 /**
  * A function for loading the company page content.
