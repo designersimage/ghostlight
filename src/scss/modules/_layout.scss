@@ -9,14 +9,13 @@
 body {
     background: rgb(0, 0, 0) url('../assets/images/ghostlight_bg.png') repeat -50% 0% fixed;
     background-size: 85%;
-    height: 100vh;
     inset: 0;
     overflow: hidden;
     position: absolute;
-    width: 100vw;
+    width: 100%;
 
     &> section {
-        min-height: 100vh;
+        min-height: 100%;
         position: relative;
         width: 100%;
     }
