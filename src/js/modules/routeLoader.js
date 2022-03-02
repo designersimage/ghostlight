@@ -6,7 +6,7 @@
  *  Author: Jonathan Wheeler
 */
 import { loadAboutPage, loadActorsPage, loadAuditionsPage, loadCareersPage, loadCommunityPage, loadHomePage, loadModelsPage, loadWorkshopPage } from "./pages";
-
+import { contactForm } from "./forms";
 /**
  * A function for loading the webpage content based on the page url.
  * 
@@ -48,6 +48,7 @@ export const routeLoader = async (basename) => {
 
         case '/company/contact.html':
             await loadAboutPage('contact');
+            await contactForm(urlParams.get('ref'));
             break;
 
         case '/company/industry_services.html':

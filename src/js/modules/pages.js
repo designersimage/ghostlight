@@ -200,7 +200,7 @@ export const loadAboutPage = async (slug, id = null) => {
     if (slug === 'bio' && id) {
         const bioEl = document.querySelector('#bio-content');
         const bio = teamData.find(member => member.id === id);
-        document.title = `Ghost Light Performance, Inc. | Bio - ${bio.name}`;
+        document.title = `${bio.name} - ${bio.title} | Ghost Light Performance, Inc.`;
         
         const nameEl = document.querySelector('.about-content > .container > h1');
         nameEl.innerText = bio.name;
@@ -252,7 +252,7 @@ export const loadAboutPage = async (slug, id = null) => {
 
         const courseEl = document.querySelector('.course-content');
         const course = workshopsData.find(course => course.id === id);
-        document.title = `Ghost Light Performance, Inc. | ${course.title.split(' ')[0]} ${course.subtitle}`
+        document.title = `${course.title.split(' ')[0]} ${course.subtitle} | Ghost Light Performance, Inc.`
         const nameEl = document.querySelector('.workshop-content > .container > h1');
         nameEl.remove();
 
@@ -311,6 +311,7 @@ export const loadAboutPage = async (slug, id = null) => {
         const span1 = document.createElement('span');
         span1.innerText = 'Service/Tools Included';
         const span2 = document.createElement('span');
+        span2.innerText = 'Standard Cost';
         span2.classList.add('table-cost');
         benefitsTitle.append(span1, span2);
         benValueEl.append(benValueTitle, benValueSubTitle, benefitsTitle)
