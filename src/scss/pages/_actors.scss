@@ -9,6 +9,7 @@
 .actor {
     background: url('../assets/images/actor_bg.jpg') repeat  right 25% top fixed;
     background-size: cover;
+    overflow-x: hidden;
     transform: translateX(0);
     @include animate( all, 250ms );
 

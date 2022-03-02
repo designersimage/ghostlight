@@ -9,6 +9,7 @@
 .career {
     background: url('../assets/images/career_bg.jpg') repeat  right 48% top fixed;
     background-size: cover;
+    overflow-x: hidden;
     transform: translateX(0);
     @include animate( all, 250ms );
 

@@ -9,6 +9,7 @@
 .community {
     background: url('../assets/images/community_bg.jpg') repeat  right 25% top fixed;
     background-size: cover;
+    overflow-x: hidden;
     transform: translateX(0);
     @include animate( all, 250ms );
 

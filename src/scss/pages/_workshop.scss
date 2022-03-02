@@ -9,6 +9,7 @@
 .workshop {
     background: url('../assets/images/workshop_bg.jpg') repeat  right 45% top fixed;
     background-size: cover;
+    overflow-x: hidden;
     transform: translateX(0);
     @include animate( all, 250ms );
 
