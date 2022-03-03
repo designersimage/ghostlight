@@ -7,21 +7,20 @@
 */
 
 .company {
-    background: url('../assets/images/company_bg.jpg') repeat  right 25% top fixed;
+    background: url('../assets/images/company_bg.jpg') no-repeat  right 25% top fixed;
     background-size: cover;
+    display: block;
+    height: 100vh;
     overflow-x: hidden;
+    position: relative;
     transform: translateX(0);
+    width: 100%;
     @include animate( all, 250ms );
 
-    &::before {
-        background-image: linear-gradient(to right, rgba(0, 0, 0, .95),rgba(0, 0, 0, .35) 50%);
-        content: '';
-        inset: 0;
-        position: absolute;
-    }
-
     .about-content {
-        margin-top: 2rem;
+        display: block;
+        min-height: 60vh;
+        margin-top: 1rem;
         transform: translateX(0);
         @include animate( all, 250ms );
 
