@@ -12,7 +12,7 @@ const imagesLoaded = sessionStorage.getItem('imagesLoaded') ? true : false;
 sessionStorage.setItem('imagesLoaded', '1');
 
 /* Set a list of images */
-const images = ['ghostlight_bg.png', 'ghostlight_logo.png', 'home_bg.jpg', 'company_bg.jpg'];
+const images = ['ghostlight_bg.png', 'ghostlight_logo.png', 'home_bg.jpg', 'company_bg.jpg', 'actor_bg.jpg', 'audition_bg.jpg', 'career_bg.jpg', 'community_bg.jpg', 'model_bg.jpg', 'workshop_bg.jpg'];
 
 if ( !imagesLoaded ) {
     images.forEach(image => {
